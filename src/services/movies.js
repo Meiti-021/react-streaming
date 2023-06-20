@@ -6,7 +6,20 @@ export const movies = [
     mainImage: "johnwick.webp",
     thumbImage: "johnwick-thumb.webp",
     bgImage: "johnwick-bg.webp",
-    casts: [],
+    casts: [
+      {
+        id: "keanuReeves",
+        role: "actor",
+      },
+      {
+        id: "laurenceFishburne",
+        role: "actor",
+      },
+      {
+        id: "chadStahelsky",
+        role: "director",
+      },
+    ],
     imdbRate: "8.5",
     timing: "1h 41m",
     thriller: "2KI8O",
@@ -38,7 +51,24 @@ export const movies = [
     mainImage: "interstellar",
     thumbImage: "iterstellar-thumb",
     bgImage: "interstellar-bg",
-    casts: "",
+    casts: [
+      {
+        id: "mattDamon",
+        role: "actor",
+      },
+      {
+        id: "matthewMcConaughey",
+        role: "actor",
+      },
+      {
+        id: "anneHathaway",
+        role: "actress",
+      },
+      {
+        id: "christopherNolan",
+        role: "director",
+      },
+    ],
     imdbRate: "8.7",
     timing: "2h 49m",
     thriller: "7XaD1",
@@ -70,7 +100,24 @@ export const movies = [
     mainImage: "inception.webp",
     thumbImage: "inception-thumb.webp",
     bgImage: "inception-bg.webp",
-    casts: "",
+    casts: [
+      {
+        id: "leonardoDiCaprio",
+        role: "actor",
+      },
+      {
+        id: "tomHardy",
+        role: "actor",
+      },
+      {
+        id: "christopherNolan",
+        role: "director",
+      },
+      {
+        id: "kilynMorphy",
+        role: "actor",
+      },
+    ],
     imdbRate: "8.8",
     timing: "2h 28m",
     thriller: "BEgyd",
@@ -97,7 +144,16 @@ export const movies = [
     mainImage: "joker.webp",
     thumbImage: "joker.webp",
     bgImage: "joker.webp",
-    casts: "",
+    casts: [
+      {
+        id: "toddPhillips",
+        role: "director",
+      },
+      {
+        id: "joaquinPhoenix",
+        role: "actor",
+      },
+    ],
     imdbRate: "8.4",
     timing: "2h 2m",
     thriller: "1Urcd",
@@ -124,7 +180,20 @@ export const movies = [
     mainImage: "puss-bg.webp",
     thumbImage: "puss-thumb.webp",
     bgImage: "puss.webp",
-    casts: "",
+    casts: [
+      {
+        id: "harveyGuillen",
+        role: "producer",
+      },
+      {
+        id: "antonioBanderas",
+        role: "director",
+      },
+      {
+        id: "chrisPratt",
+        role: "animator",
+      },
+    ],
     imdbRate: "7.9",
     timing: "1h 42m",
     thriller: "Mmt1O",
@@ -156,7 +225,20 @@ export const movies = [
     mainImage: "matrix.webp",
     thumbImage: "matrix-thumb.webp",
     bgImage: "matrix-bg.webp",
-    casts: "",
+    casts: [
+      {
+        id: "keanuReeves",
+        role: "actor",
+      },
+      {
+        id: "carrieAnneMoss",
+        role: "actress",
+      },
+      {
+        id: "lanaWachowski",
+        role: "director",
+      },
+    ],
     imdbRate: "5.4",
     timing: "2h 28m",
     thriller: "2nmcv",
@@ -178,7 +260,24 @@ export const movies = [
     mainImage: "mario.webp",
     thumbImage: "mario-thumb.webp",
     bgImage: "mario-bg.webp",
-    casts: "",
+    casts: [
+      {
+        id: "anyaTaylor",
+        role: "actress",
+      },
+      {
+        id: "chrisPratt",
+        role: "Director",
+      },
+      {
+        id: "joelCrawford",
+        role: "animator",
+      },
+      {
+        id: "sethRogen",
+        role: "actor",
+      },
+    ],
     imdbRate: "7.1",
     timing: "1h 32m",
     thriller: "ixVZb",
@@ -210,7 +309,16 @@ export const movies = [
     mainImage: "covenant.webp",
     thumbImage: "covenant-thumb.webp",
     bgImage: "covenant.webp",
-    casts: "",
+    casts: [
+      {
+        id: "jackGylenhaal",
+        role: "actor",
+      },
+      {
+        id: "antonyStarr",
+        role: "actor",
+      },
+    ],
     imdbRate: "7.5",
     timing: "2h 10m",
     thriller: "FQcqe",

@@ -6,7 +6,32 @@ export const shows = [
     mainImage: "theboys.webp",
     thumbImage: "theboys-thumb.webp",
     bgImage: "theboys-bg.webp",
-    casts: [],
+    casts: [
+      {
+        id: "antonyStarr",
+        role: "actor",
+      },
+      {
+        id: "erinMoriarty",
+        role: "actress",
+      },
+      {
+        id: "dominiqueMcelligott",
+        role: "actress",
+      },
+      {
+        id: "erikKripke",
+        role: "producer",
+      },
+      {
+        id: "sethRogen",
+        role: "writer",
+      },
+      {
+        id: "evanGoldberg",
+        role: "director",
+      },
+    ],
     imdbRate: "8.7",
     thriller: "urDhv",
     reviews: "",
@@ -191,7 +216,24 @@ export const shows = [
     mainImage: "money-heist.webp",
     thumbImage: "money-heist-thumb.webp",
     bgImage: "money-heist-bg.webp",
-    casts: [],
+    casts: [
+      {
+        id: "alvaroMorty",
+        role: "actor",
+      },
+      {
+        id: "pedroAlonso",
+        role: "actor",
+      },
+      {
+        id: "ursulaCorbero",
+        role: "actress",
+      },
+      {
+        id: "alejandroPinaCalafi",
+        role: "director",
+      },
+    ],
     imdbRate: "8.2",
     thriller: "",
     reviews: "",
@@ -392,7 +434,24 @@ export const shows = [
     mainImage: "lastofus.webp",
     thumbImage: "lastofus-thumb.webp",
     bgImage: "lastofus-bg.webp",
-    casts: [],
+    casts: [
+      {
+        id: "pedroPascal",
+        role: "actor",
+      },
+      {
+        id: "bellaRamsey",
+        role: "actress",
+      },
+      {
+        id: "annaTorv",
+        role: "actress",
+      },
+      {
+        id: "kantemirBalagov",
+        role: "director",
+      },
+    ],
     imdbRate: "8.8",
     thriller: "AK9q6",
     reviews: "",
@@ -492,7 +551,28 @@ export const shows = [
     mainImage: "breaking.webp",
     thumbImage: "breaking-bg.webp",
     bgImage: "breaking-bg.webp",
-    casts: [],
+    casts: [
+      {
+        id: "bryanCranston",
+        role: "actor",
+      },
+      {
+        id: "aaronPaul",
+        role: "actor",
+      },
+      {
+        id: "bobOdenkirk",
+        role: "actor",
+      },
+      {
+        id: "annaGunn",
+        role: "actress",
+      },
+      {
+        id: "vinceGilligan",
+        role: "director",
+      },
+    ],
     imdbRate: "9.5",
     thriller: "OxZ0T",
     reviews: "",
