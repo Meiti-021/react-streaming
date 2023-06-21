@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 function App() {
   return (
     <div className="font-roboto">
@@ -9,6 +10,7 @@ function App() {
         <Routes>
           <Route path="/" element={<></>} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );

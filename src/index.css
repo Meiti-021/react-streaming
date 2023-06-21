@@ -6,4 +6,7 @@
   html {
     @apply font-roboto w-screen overflow-x-hidden;
   }
+  body::-webkit-scrollbar {
+    @apply hidden;
+  }
 }

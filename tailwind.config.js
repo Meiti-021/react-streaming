@@ -13,10 +13,18 @@ export default {
         "dark-gray": "#1A1A1A",
         "darker-gray": "#141414",
         gray: "#CECDCC",
+        "semi-dark-gray": "#191919",
       },
     },
     borderWidth: {
       1: "1px",
+    },
+    screens: {
+      xl: "1240px",
+      xs: "500px",
+      xxs: "400px",
+      sm: "640px",
+      lg: "1024px",
     },
   },
   plugins: [],

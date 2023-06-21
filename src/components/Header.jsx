@@ -295,7 +295,7 @@ InnerSubSideMenu.propTypes = InnerSubmenu.propTypes = {
   title: PropTypes.string,
   address: PropTypes.string,
 };
-SideMenu.propTypes = Menu.propTypes = {
+SideMenu.propTypes = {
   title: PropTypes.string,
   address: PropTypes.string,
   submenu: PropTypes.array,
@@ -304,6 +304,12 @@ SubSideMenu.propTypes = Submenu.propTypes = {
   title: PropTypes.string,
   address: PropTypes.string,
   sidemenu: PropTypes.array,
+};
+
+Menu.propTypes = {
+  title: PropTypes.string,
+  submenu: PropTypes.array,
+  address: PropTypes.string,
 };
 
 export default Header;
