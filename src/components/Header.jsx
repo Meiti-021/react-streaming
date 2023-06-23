@@ -226,7 +226,7 @@ const Header = () => {
   const [sideNavOpen, setSideNavOpen] = useState(false);
 
   return (
-    <div className="bg-black h-16 md:h-20 flex justify-center items-center px-5 sm:px-10 text-white">
+    <div className="bg-black absolute z-50 w-full h-16 md:h-20 flex justify-center items-center px-5 sm:px-10 text-white">
       <div className="w-full h-full max-w-screen-2xl mx-auto flex items-center ">
         <img src={logo} alt="" className="w-36 sm:w-44" />
         <ul className="hidden lg:flex items-center justify-between border-2 h-full w-[30rem] border-white ml-16 xl:ml-32">

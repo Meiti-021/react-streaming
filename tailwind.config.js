@@ -2,10 +2,12 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   darkMode: "class",
+  safelist: ["animate-[fade-in-right_1s_ease-in-out]"],
   theme: {
     extend: {
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
+        "roboto-slab": ["Roboto Slab", "serif"],
       },
       colors: {
         "dark-red": "#581E21",
