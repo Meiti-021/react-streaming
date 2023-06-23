@@ -7,7 +7,6 @@ import { useRef } from "react";
 import { ArrowLeft, ArrowRight } from "../utils/icons";
 import { useMediaQuery } from "@mui/material";
 import { cast } from "../services/cast";
-import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 const CastChart = () => {
   const swiperRef = useRef(null);

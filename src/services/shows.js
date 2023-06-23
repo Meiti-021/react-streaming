@@ -32,6 +32,7 @@ export const shows = [
         title: "season 1",
         episodes: [
           {
+            id: "mhs1e1",
             timing: "39m 58s",
             video: "T5cWo",
             links: [
@@ -48,6 +49,7 @@ export const shows = [
             ],
           },
           {
+            id: "mhs1e2",
             timing: "50m 35s",
             video: "ZItab",
             links: [
@@ -64,6 +66,7 @@ export const shows = [
             ],
           },
           {
+            id: "mhs1e3",
             timing: "51m 17s",
             video: "6dlGb",
             links: [
@@ -80,6 +83,7 @@ export const shows = [
             ],
           },
           {
+            id: "mhs1e4",
             timing: "43m 17s",
             video: "2cDSz",
             links: [
@@ -96,6 +100,7 @@ export const shows = [
             ],
           },
           {
+            id: "mhs1e5",
             timing: "41m 56s",
             video: "Ltual",
             links: [
@@ -117,6 +122,7 @@ export const shows = [
         title: "season 2",
         episodes: [
           {
+            id: "mhs2e1",
             timing: "43m 01s",
             video: "cOnyN",
             links: [
@@ -133,6 +139,7 @@ export const shows = [
             ],
           },
           {
+            id: "mhs2e2",
             timing: "40m 26s",
             video: "FjSMG",
             links: [
@@ -149,6 +156,7 @@ export const shows = [
             ],
           },
           {
+            id: "mhs2e3",
             timing: "51m 15s",
             video: "znk73",
             links: [
@@ -165,6 +173,7 @@ export const shows = [
             ],
           },
           {
+            id: "mhs2e4",
             timing: "39m 13s",
             video: "Wgdhf",
             links: [
@@ -181,6 +190,7 @@ export const shows = [
             ],
           },
           {
+            id: "mhs2e5",
             timing: "36m 28s",
             video: "Li2k3",
             links: [
@@ -197,6 +207,7 @@ export const shows = [
             ],
           },
           {
+            id: "mhs2e6",
             timing: "53m 52s",
             video: "CEN86",
             links: [
@@ -253,6 +264,7 @@ export const shows = [
         title: "season 1",
         episodes: [
           {
+            id: "tlus1e1",
             timing: "1h 20m",
             video: "swYOQ",
             links: [
@@ -269,6 +281,7 @@ export const shows = [
             ],
           },
           {
+            id: "tlus1e2",
             timing: "1h 10m",
             video: "f75wT",
             links: [
@@ -285,6 +298,7 @@ export const shows = [
             ],
           },
           {
+            id: "tlus1e3",
             timing: "45m 08",
             video: "XrIYx",
             links: [
@@ -301,6 +315,7 @@ export const shows = [
             ],
           },
           {
+            id: "tlus1e4",
             timing: "58m 58s",
             video: "ihH0Y",
             links: [
@@ -317,6 +332,7 @@ export const shows = [
             ],
           },
           {
+            id: "tlus1e5",
             timing: "52m 43s",
             video: "pBJ0s",
             links: [
@@ -377,6 +393,7 @@ export const shows = [
         title: "season 1",
         episodes: [
           {
+            id: "bbs1e1",
             timing: "49m 41s",
             video: "F3yZa",
             links: [
@@ -393,6 +410,7 @@ export const shows = [
             ],
           },
           {
+            id: "bbs1e2",
             timing: "45m 18s",
             video: "3Mzay",
             links: [
@@ -409,6 +427,7 @@ export const shows = [
             ],
           },
           {
+            id: "bbs1e3",
             timing: "46m 25s",
             video: "nqVgx",
             links: [
@@ -425,6 +444,7 @@ export const shows = [
             ],
           },
           {
+            id: "bbs1e4",
             timing: "47m 18s",
             video: "ugHsd",
             links: [
@@ -441,6 +461,7 @@ export const shows = [
             ],
           },
           {
+            id: "bbs1e5",
             timing: "44m 06s",
             video: "gj5iJ",
             links: [
@@ -462,6 +483,7 @@ export const shows = [
         title: "season 2",
         episodes: [
           {
+            id: "bbs2e1",
             timing: "46m 15s",
             video: "vdhs6",
             links: [
@@ -478,6 +500,7 @@ export const shows = [
             ],
           },
           {
+            id: "bbs2e2",
             timing: "44m 37s",
             video: "g4y8Q",
             links: [
@@ -494,6 +517,7 @@ export const shows = [
             ],
           },
           {
+            id: "bbs2e3",
             timing: "49m 41s",
             video: "F3yZa",
             links: [
@@ -510,6 +534,7 @@ export const shows = [
             ],
           },
           {
+            id: "bbs2e4",
             timing: "45m 18s",
             video: "3Mzay",
             links: [
@@ -526,6 +551,7 @@ export const shows = [
             ],
           },
           {
+            id: "bbs2e5",
             timing: "46m 25s",
             video: "nqVgx",
             links: [
@@ -558,7 +584,7 @@ export const shows = [
     bgImage: "theboys-bg.webp",
     casts: [
       {
-        id: "antonyStarr",
+        id: "antonystarr",
         role: "actor",
       },
       {
@@ -590,6 +616,7 @@ export const shows = [
         title: "season 1",
         episodes: [
           {
+            id: "tb1e1",
             timing: "49 m",
             video: "nUwcb",
             links: [
@@ -606,6 +633,7 @@ export const shows = [
             ],
           },
           {
+            id: "tb1e2",
             timing: "49m 37s",
             video: "ALxGs",
             links: [
@@ -622,6 +650,7 @@ export const shows = [
             ],
           },
           {
+            id: "tb1e2",
             timing: "49m 39s",
             video: "3INdb",
             links: [
@@ -638,6 +667,7 @@ export const shows = [
             ],
           },
           {
+            id: "tb1e3",
             timing: "49m 39s",
             video: "wYRoj",
             links: [
@@ -654,6 +684,7 @@ export const shows = [
             ],
           },
           {
+            id: "tb1e4",
             timing: "49m 37s",
             video: "elUMs",
             links: [
@@ -675,6 +706,7 @@ export const shows = [
         title: "season 2",
         episodes: [
           {
+            id: "tb2e1",
             timing: "49m 39s",
             video: "ge2dC",
             links: [
@@ -691,6 +723,7 @@ export const shows = [
             ],
           },
           {
+            id: "tb2e2",
             timing: "48m 38s",
             video: "tlPwM",
             links: [
@@ -707,6 +740,7 @@ export const shows = [
             ],
           },
           {
+            id: "tb2e3",
             timing: "48m 50s",
             video: "5oDP0",
             links: [
@@ -723,6 +757,7 @@ export const shows = [
             ],
           },
           {
+            id: "tb2e4",
             timing: "49m 39s",
             video: "x8np7",
             links: [
@@ -739,6 +774,7 @@ export const shows = [
             ],
           },
           {
+            id: "tb2e5",
             timing: "49m 39s",
             video: "PQtvi",
             links: [
