@@ -1,13 +1,13 @@
 export const cast = [
   {
-    id: "antonyStarr",
+    id: "antonystarr",
     name: "Antony Starr",
     knownAs: "actor",
     nationality: "New Zealand",
     bio: "Antony Starr is a New Zealand actor known for his role as Homelander in the TV series 'The Boys.' With his compelling portrayal of the complex character, Starr has captivated audiences and showcased his exceptional acting abilities. Prior to 'The Boys,' he gained recognition for his performance in the TV series 'Banshee,' where he portrayed the protagonist with intensity and depth.",
   },
   {
-    id: "jackGylenhaal",
+    id: "jakegyllenhaal",
     name: "Jake Gyllenhaal",
     knownAs: "actor",
     nationality: "United States",

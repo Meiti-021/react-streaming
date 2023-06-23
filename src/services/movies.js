@@ -58,11 +58,11 @@ export const movies = [
     bgImage: "covenant.webp",
     casts: [
       {
-        id: "jackGylenhaal",
+        id: "jakegyllenhaal",
         role: "actor",
       },
       {
-        id: "antonyStarr",
+        id: "antonystarr",
         role: "actor",
       },
     ],
