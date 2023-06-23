@@ -7,7 +7,6 @@ import { ArrowLeft, ArrowRight, IconPlay } from "../utils/icons";
 import { useEffect, useRef, useState } from "react";
 import { Rating } from "@mui/material";
 import { castFinder } from "../utils/utils";
-import { cast } from "../services/cast";
 import { Link } from "react-router-dom";
 import anime from "animejs/lib/anime.es.js";
 const HomeHero = () => {
@@ -15,11 +14,11 @@ const HomeHero = () => {
   const bigSwiper = useRef(null);
   const smallSwiper = useRef(null);
   const nextBtn = useRef(null);
-  useEffect(() => {
-    setInterval(() => {
-      nextSlide();
-    }, 7000);
-  }, []);
+  // useEffect(() => {
+  //   setInterval(() => {
+  //     nextSlide();
+  //   }, 7000);
+  // }, []);
   useEffect(() => {
     anime({
       targets: ".animated",
@@ -51,20 +50,10 @@ const HomeHero = () => {
   const nextSlide = () => {
     bigSwiper.current.swiper.slideNext();
     smallSwiper.current.swiper.slideNext();
-    // if (index === movies.length - 1) {
-    //   setIndex(0);
-    // } else {
-    //   setIndex(index + 1);
-    // }
   };
   const prevSlide = () => {
     bigSwiper.current.swiper.slidePrev();
     smallSwiper.current.swiper.slidePrev();
-    // if (index === 0) {
-    //   setIndex(movies.length - 1);
-    // } else {
-    //   setIndex(index - 1);
-    // }
   };
   return (
     <div className="w-full relative h-[45rem] lg:min-h-screen bg-green-400 ">
@@ -72,12 +61,12 @@ const HomeHero = () => {
         modules={[Navigation]}
         loop={true}
         ref={bigSwiper}
-        className="mySwiper absolute w-full h-full top-0 left-0 "
+        className="mySwiper absolute w-full h-full top-0 left-0  "
       >
         {movies.map((item, index) => {
           return (
             <SwiperSlide
-              className="w-full h-full flex justify-center items-center"
+              className="w-full h-full flex justify-center  items-center"
               key={"hero-swiper-bg" + item.id}
             >
               {({ isActive }) => (

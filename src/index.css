@@ -9,4 +9,7 @@
   body::-webkit-scrollbar {
     @apply hidden;
   }
+  body {
+    @apply bg-darker-gray text-white font-roboto;
+  }
 }

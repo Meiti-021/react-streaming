@@ -18,11 +18,11 @@ export const UserIcon = ({ className }) => {
   );
 };
 
-export const ArrowDown = ({ className }) => {
+export const ArrowDown = ({ className = "h-5 w-5" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className={`h-5 w-5 ${className}`}
+      className={`${className}`}
       viewBox="0 0 20 20"
       fill="currentColor"
     >
@@ -34,11 +34,11 @@ export const ArrowDown = ({ className }) => {
     </svg>
   );
 };
-export const ArrowRight = ({ className }) => {
+export const ArrowRight = ({ className = "h-5 w-5" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className={`h-5 w-5 ${className}`}
+      className={`${className}`}
       viewBox="0 0 20 20"
       fill="currentColor"
     >
@@ -50,11 +50,11 @@ export const ArrowRight = ({ className }) => {
     </svg>
   );
 };
-export const ArrowLeft = ({ className }) => {
+export const ArrowLeft = ({ className = "h-5 w-5" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className={`h-5 w-5 ${className}`}
+      className={`${className}`}
       viewBox="0 0 20 20"
       fill="currentColor"
     >
