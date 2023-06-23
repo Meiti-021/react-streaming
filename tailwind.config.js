@@ -28,6 +28,8 @@ export default {
       sm: "640px",
       lg: "1024px",
       "2xl": "1538px",
+      "3xl": "1638px",
+      md: "768px",
     },
   },
   plugins: [],

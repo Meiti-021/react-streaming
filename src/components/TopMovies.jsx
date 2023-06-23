@@ -30,7 +30,7 @@ const TopMovies = () => {
             {movies.map((item, index) => {
               return (
                 <SwiperSlide
-                  className="relative h-96 "
+                  className="relative h-96 rounded-sm"
                   key={"top10-swiper-sm" + item.id}
                 >
                   <Link className="relative  w-full h-full block ">
