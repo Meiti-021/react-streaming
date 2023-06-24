@@ -3,7 +3,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { movies } from "../services/movies";
 import { Navigation } from "swiper";
-import { ArrowLeft, ArrowRight, IconPlay } from "../utils/icons";
+import { ArrowLeft, ArrowRight } from "../utils/icons";
 import { useEffect, useRef, useState } from "react";
 import { Rating } from "@mui/material";
 import { castFinder } from "../utils/utils";

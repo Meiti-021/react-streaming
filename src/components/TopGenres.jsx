@@ -7,7 +7,6 @@ import { Navigation } from "swiper";
 import { useRef, useState } from "react";
 import { ArrowLeft, ArrowRight } from "../utils/icons";
 import { useMediaQuery } from "@mui/material";
-import MovieCard from "./MovieCard";
 import { Link } from "react-router-dom";
 const genres = ["action", "comedy", "drama", "animation", "crime"];
 
