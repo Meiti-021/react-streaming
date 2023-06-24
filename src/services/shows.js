@@ -230,6 +230,7 @@ export const shows = [
     description:
       "Money Heist is a TV series about a group of robbers who plan and execute the biggest heists in history by targeting the Royal Mint of Spain and the Bank of Spain. They are led by a mysterious man called The Professor, who has a detailed plan and a code not to harm anyone. The series follows the robbers and the hostages as they face various challenges and twists during the heists. The series also explores the personal lives and relationships of the robbers, the hostages, and the police.",
     likes: 1200,
+    timing: "Tv Series",
   },
   {
     id: "thelastofus",
@@ -355,6 +356,7 @@ export const shows = [
     description:
       '"The Last of Us" series is a post-apocalyptic narrative following Joel and Ellie. In the first game, Joel escorts Ellie, an immune girl, across a dangerous world to a group seeking a vaccine. The sequel focuses on Ellie seeking revenge against a faction that caused her personal loss. Both games explore themes of survival, love, and the moral complexities of a devastated society.',
     likes: 985,
+    timing: "Tv Series",
   },
   {
     id: "breaking",
@@ -574,6 +576,7 @@ export const shows = [
     description:
       '"Breaking Bad" is a riveting series about a high school chemistry teacher turned meth manufacturer, Walter White, and his partnership with small-time dealer Jesse Pinkman. Together, they navigate the criminal underworld, facing moral dilemmas and the consequences of their choices. The show delves into themes of morality, identity, and the transformation of Walter into a notorious drug lord.',
     likes: 12452,
+    timing: "Tv Series",
   },
   {
     id: "theboys",
@@ -797,5 +800,6 @@ export const shows = [
     description:
       "The Boys is a TV series based on a comic book that depicts a world where superheroes are corrupted by a corporation and a team of vigilantes who fight against them. The story revolves around Hughie, who joins the vigilantes after his girlfriend is killed by a superhero, and Annie, who joins the superheroes as a naive heroine but soon learns their dark secrets.",
     likes: 2374,
+    timing: "Tv Series",
   },
 ];

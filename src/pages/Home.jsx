@@ -2,6 +2,7 @@ import CastChart from "../components/CastChart";
 import HomeHero from "../components/HomeHero";
 import MovieChart from "../components/MovieChart";
 import ShowHero from "../components/ShowHero";
+import TopGenres from "../components/TopGenres";
 import TopMovies from "../components/TopMovies";
 import TopSeries from "../components/TopSeries";
 import { movies } from "../services/movies";
@@ -25,6 +26,7 @@ const Home = () => {
         title="Recommended For You"
         list={shuffle([...movies, ...shows]).slice(0, 10)}
       />
+      <TopGenres />
       <MovieChart
         title="Topiks For You"
         list={shuffle([...movies, ...shows]).slice(0, 10)}

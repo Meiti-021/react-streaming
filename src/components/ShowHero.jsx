@@ -205,7 +205,7 @@ const ShowHero = () => {
               <p className=" flex items-center whitespace-nowrap lg:text-sm">
                 {shows[index].timing}
               </p>
-              <p className=" text-light-red font-semibold lg:text-sm flex items-center">
+              <p className="col-span-2 text-light-red font-semibold lg:text-sm flex items-center">
                 Genres:{" "}
                 <span className="text-white ml-1 text-sm">
                   {shows[index].genres.split(",")[0]}
