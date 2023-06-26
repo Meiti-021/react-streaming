@@ -3,10 +3,8 @@ import PropTypes from "prop-types";
 import Lottie from "lottie-react";
 import watch from "../utils/watch.json";
 import { Link } from "react-router-dom";
-const MovieCard2 = ({ timing, title, likes, mainImage, id }) => {
+const MovieCard2 = ({ timing, title, mainImage, id }) => {
   const [isHover, setIsHover] = useState(false);
-  const [isHoverHeart, setIsHoverHeart] = useState(false);
-  const [isHoverShare, setIsHoverShare] = useState(false);
   return (
     <article
       className="relative"
@@ -41,7 +39,7 @@ const MovieCard2 = ({ timing, title, likes, mainImage, id }) => {
         }`}
       >
         <Link
-          to={`/movies/${id}`}
+          to={timing === "Tv Series" ? `/series/${id}` : `/movies/${id}`}
           className={`w-44 transition-all    h-44 rounded-full flex justify-center items-center `}
         >
           <Lottie animationData={watch} />
@@ -52,8 +50,9 @@ const MovieCard2 = ({ timing, title, likes, mainImage, id }) => {
 };
 
 MovieCard2.propTypes = {
-  thumbImage: PropTypes.string,
+  mainImage: PropTypes.string,
   timing: PropTypes.string,
+  id: PropTypes.string,
   title: PropTypes.string,
   likes: PropTypes.number,
 };

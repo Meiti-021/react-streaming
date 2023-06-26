@@ -10,7 +10,7 @@ import {
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-const MovieCard = ({ timing, title, likes, thumbImage }) => {
+const MovieCard = ({ timing, title, likes, thumbImage, id }) => {
   const [isHover, setIsHover] = useState(false);
   const [isHoverHeart, setIsHoverHeart] = useState(false);
   const [isHoverShare, setIsHoverShare] = useState(false);
@@ -32,7 +32,7 @@ const MovieCard = ({ timing, title, likes, thumbImage }) => {
         className="block w-full mx-auto h-full object-cover"
       />
       <div
-        className={`h-20 absolute   p-5 px-7 transition-all duration-300   flex justify-between items-center left-0 bottom-20 w-full ${
+        className={`h-20 absolute p-5 px-7 transition-all duration-300   flex justify-between items-center left-0 bottom-20 w-full ${
           isHover ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
@@ -78,7 +78,10 @@ const MovieCard = ({ timing, title, likes, thumbImage }) => {
             </div>
           </div>
         </div>
-        <Link className="w-11 h-11 flex justify-center items-center transition-all duration-300 hover:text-white hover:bg-red-800 rounded-full bg-light-red">
+        <Link
+          to={timing === "Tv Series" ? `/series/${id}` : `/movies/${id}`}
+          className="w-11 h-11 flex justify-center items-center transition-all duration-300 hover:text-white hover:bg-red-800 rounded-full bg-light-red"
+        >
           <IconPlay />
         </Link>
       </div>
