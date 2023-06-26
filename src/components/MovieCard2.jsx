@@ -7,7 +7,7 @@ const MovieCard2 = ({ timing, title, mainImage, id }) => {
   const [isHover, setIsHover] = useState(false);
   return (
     <article
-      className="relative"
+      className="relative h-full"
       onMouseEnter={() => {
         setIsHover(true);
       }}
@@ -18,7 +18,7 @@ const MovieCard2 = ({ timing, title, mainImage, id }) => {
       <img
         src={`/assets/collections/${mainImage}`}
         alt=""
-        className="block w-full mx-auto h-full  object-cover object-top"
+        className="block w-full  h-full  object-cover object-top"
       />
       <div
         className={`absolute bottom-0 w-full h-2/3 bg-gradient-to-t from-black to-[rgba(0,0,0,0)] ${

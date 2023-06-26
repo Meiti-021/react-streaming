@@ -116,6 +116,7 @@ const MovieCard = ({ timing, title, likes, thumbImage, id }) => {
 MovieCard.propTypes = {
   thumbImage: PropTypes.string,
   timing: PropTypes.string,
+  id: PropTypes.string,
   title: PropTypes.string,
   likes: PropTypes.number,
 };

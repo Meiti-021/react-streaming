@@ -11,14 +11,17 @@ import MovieSource from "../components/MovieSource";
 import MovieCast from "../components/MovieCast";
 import Loading from "../components/Loading";
 import { IconLock } from "../utils/icons";
-const Movies = () => {
+import ShowSource from "../components/ShowSource";
+const Series = () => {
   const { id } = useParams();
-  const [movie, setMovie] = useState(undefined);
+  const [show, setShow] = useState(undefined);
+  const [episode, setEpisode] = useState(0);
+  const [season, setSeason] = useState(0);
   const [loading, setLoading] = useState(false);
   const path = useLocation();
   useEffect(() => {
-    const exist = movies.find((item) => item.id === id);
-    setMovie(exist);
+    const exist = shows.find((item) => item.id === id);
+    setShow(exist);
   }, [id]);
 
   useEffect(() => {
@@ -32,7 +35,7 @@ const Movies = () => {
     return <Loading />;
   }
 
-  if (movie === undefined) {
+  if (show === undefined) {
     return <h1>404</h1>;
   }
   return (
@@ -40,7 +43,7 @@ const Movies = () => {
       <Wrapper>
         <div className="relative mt-10 ">
           <>
-            {movie.premium ? (
+            {show.premium ? (
               <div className="aspect-video gap-10 w-full h-auto flex flex-col justify-center items-center">
                 <p className="text-7xl">
                   <IconLock className="h-44 w-44" />
@@ -59,12 +62,12 @@ const Movies = () => {
                   fluid: false,
                   sources: [
                     {
-                      src: movie.video,
+                      src: show.series[season].episodes[episode].video,
                       type: "video/mp4",
                     },
                   ],
 
-                  poster: `/assets/collections/${movie.bgImage}`,
+                  poster: `/assets/collections/${show.bgImage}`,
                   aspectRatio: "16:9",
                 }}
               />
@@ -72,9 +75,14 @@ const Movies = () => {
           </>
         </div>
 
-        <MovieInfo movie={movie} />
-        <MovieSource movie={movie} />
-        <MovieCast movie={movie} />
+        <MovieInfo movie={show} season={season} episode={episode} />
+        <ShowSource
+          movie={show}
+          season={season}
+          setEpisode={setEpisode}
+          episode={episode}
+        />
+        <MovieCast movie={show} />
       </Wrapper>
       <MovieChart2
         title="Related Movies & Shows"
@@ -88,4 +96,4 @@ const Movies = () => {
   );
 };
 
-export default Movies;
+export default Series;

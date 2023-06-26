@@ -1,5 +1,4 @@
 import { useState, useRef } from "react";
-import { movies } from "../services/movies";
 import Lottie from "lottie-react";
 import play from "../utils/play.json";
 import { Rating } from "@mui/material";
@@ -15,7 +14,7 @@ import {
   IconTick,
 } from "../utils/icons";
 
-const MovieInfo = ({ movie }) => {
+const MovieInfo = ({ movie, season, episode }) => {
   const playlistRef = useRef(null);
   const [list, setList] = useState(["New play list"]);
   const [newList, setNewList] = useState(list[0]);
@@ -27,7 +26,10 @@ const MovieInfo = ({ movie }) => {
       <div className="flex flex-col gap-10 xs:h-72 justify-between ">
         <div className="flex items-start flex-wrap flex-col xs:flex-row xs:items-center gap-3">
           <h1 className="text-4xl font-bold uppercase text-transparent bg-clip-text bg-[url(/assets/others/bg.webp)]">
-            {movie.title}
+            {movie.title}{" "}
+            {season !== undefined && episode !== undefined
+              ? `(S${season + 1}E${episode + 1})`
+              : undefined}
           </h1>
           <div className="flex items-center gap-2 ">
             <Rating
@@ -66,7 +68,7 @@ const MovieInfo = ({ movie }) => {
             </div>
             <div
               className="h-11 w-11 rounded-full p-1 bg-slate-400"
-              title={`+ ${movies[5].likes}`}
+              title={`+ ${movie.likes}`}
             >
               <button className="w-full rounded-full h-full flex justify-center items-center bg-white text-light-red">
                 <IconHeart />
@@ -196,6 +198,8 @@ const MovieInfo = ({ movie }) => {
 
 MovieInfo.propTypes = {
   movie: PropTypes.object,
+  season: PropTypes.number,
+  episode: PropTypes.number,
 };
 
 export default MovieInfo;
