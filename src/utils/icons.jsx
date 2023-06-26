@@ -250,6 +250,63 @@ export const IconPlay = ({ className }) => {
     </svg>
   );
 };
+export const IconTag = ({ className = "h-5 w-5" }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      viewBox="0 0 20 20"
+      fill="currentColor"
+    >
+      <path
+        fillRule="evenodd"
+        d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z"
+        clipRule="evenodd"
+      />
+    </svg>
+  );
+};
+export const IconPlus = ({ className = "h-5 w-5" }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      viewBox="0 0 20 20"
+      fill="currentColor"
+    >
+      <path
+        fillRule="evenodd"
+        d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+        clipRule="evenodd"
+      />
+    </svg>
+  );
+};
+export const IconDownload = ({ className = "h-5 w-5 " }) => {
+  return (
+    <svg viewBox="0 0 1000 1000" fill="currentColor" className={className}>
+      <path d="M967.75 652c12 6.667 21 17.333 27 32 6 14.667 7 28 3 40l-28 154c-2.667 13.333-10 24.333-22 33-12 8.667-25.333 13-40 13h-816c-14.667 0-28-4.333-40-13s-19.333-19.667-22-33l-28-154c-6.667-32 4-56 32-72l158-108h98l-170 130h178c5.333 0 9.333 2.667 12 8l40 110h300l40-110c5.333-5.333 9.333-8 12-8h178l-170-130h98l160 108m-208-322l-260 244-260-244h166V74h190v256h164" />
+    </svg>
+  );
+};
+export const IconTick = ({ className = "h-6 w-6 text-green-500" }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className={className}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M4.5 12.75l6 6 9-13.5"
+      />
+    </svg>
+  );
+};
 
 UserIcon.propTypes =
   SearchIcon.propTypes =
@@ -268,6 +325,10 @@ UserIcon.propTypes =
   IconShare.propTypes =
   IconLink.propTypes =
   ArrowUp.propTypes =
+  IconTag.propTypes =
+  IconPlus.propTypes =
+  IconDownload.propTypes =
+  IconTick.propTypes =
     {
       className: PropTypes.string,
     };

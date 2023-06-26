@@ -70,18 +70,19 @@ export const movies = [
     timing: "2h 10m",
     thriller:
       "https://digimovie.vip/wp-content/uploads/2023/02/THE_COVENANT_Official_Trailer-1.mp4",
-    video: "https://archive.org/download/Covenant_201505/Covenant.mp4",
+    video:
+      "https://cdn2.uptv.ir/?s=11&f=film2/2023/The_Covenant_2023_720p_UPTV.co_Sub.mkv?1687615288",
     reviews: "",
     links: [
       {
         resolution: "480p",
         language: "English",
-        link: "https://archive.org/download/Covenant_201505/Covenant.mp4",
+        link: "https://cdn2.uptv.ir/?s=11&f=film2/2023/The_Covenant_2023_720p_UPTV.co_Sub.mkv?1687615288",
       },
       {
         resolution: "720p",
         language: "English",
-        link: "https://archive.org/download/Covenant_201505/Covenant.mp4",
+        link: "https://cdn2.uptv.ir/?s=11&f=film2/2023/The_Covenant_2023_720p_UPTV.co_Sub.mkv?1687615288",
       },
     ],
     premium: true,

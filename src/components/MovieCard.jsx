@@ -10,7 +10,7 @@ import {
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-const MovieCard = ({ mainImage, timing, title, likes }) => {
+const MovieCard = ({ timing, title, likes, thumbImage }) => {
   const [isHover, setIsHover] = useState(false);
   const [isHoverHeart, setIsHoverHeart] = useState(false);
   const [isHoverShare, setIsHoverShare] = useState(false);
@@ -27,7 +27,7 @@ const MovieCard = ({ mainImage, timing, title, likes }) => {
       }}
     >
       <img
-        src={`/assets/collections/${mainImage}`}
+        src={`/assets/collections/${thumbImage}`}
         alt=""
         className="block w-full mx-auto h-full object-cover"
       />
@@ -111,7 +111,7 @@ const MovieCard = ({ mainImage, timing, title, likes }) => {
 };
 
 MovieCard.propTypes = {
-  mainImage: PropTypes.string,
+  thumbImage: PropTypes.string,
   timing: PropTypes.string,
   title: PropTypes.string,
   likes: PropTypes.number,

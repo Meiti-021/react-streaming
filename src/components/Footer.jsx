@@ -5,7 +5,7 @@ import google from "../assets/google-play.webp";
 import { IconFacebook, IconInstagram, IconLinkedin } from "../utils/icons";
 const Footer = () => {
   return (
-    <div className="bg-black px-10 py-24 text-white">
+    <div className="bg-black relative z-40 px-10 py-24 text-white">
       <div className="max-w-screen-2xl mx-auto">
         <div className="grid xl:grid-cols-8  gap-x-14 gap-y-16 grid-cols-1 sm:grid-cols-4">
           <div className="flex flex-col sm:col-span-2  xl:col-span-2 gap-10">
