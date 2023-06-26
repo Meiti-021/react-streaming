@@ -7,7 +7,6 @@ import { shuffle } from "../utils/utils";
 import MovieChart2 from "../components/MovieChart2";
 import { shows } from "../services/shows";
 import MovieInfo from "../components/MovieInfo";
-import MovieSource from "../components/MovieSource";
 import MovieCast from "../components/MovieCast";
 import Loading from "../components/Loading";
 import { IconLock } from "../utils/icons";

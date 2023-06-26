@@ -1,7 +1,7 @@
 import React from "react";
 import videojs from "video.js";
 import "video.js/dist/video-js.css";
-
+import PropTypes from "prop-types";
 export const VideoJS = (props) => {
   const videoRef = React.useRef(null);
   const playerRef = React.useRef(null);
@@ -30,7 +30,7 @@ export const VideoJS = (props) => {
       player.poster(options.poster);
       player.aspectRatio(options.aspectratio);
     }
-  }, [options, videoRef]);
+  }, [options, videoRef, onReady]);
 
   // Dispose the Video.js player when the functional component unmounts
   React.useEffect(() => {
@@ -49,6 +49,11 @@ export const VideoJS = (props) => {
       <div ref={videoRef} />
     </div>
   );
+};
+
+VideoJS.propTypes = {
+  options: PropTypes.object,
+  onReady: PropTypes.object,
 };
 
 export default VideoJS;
