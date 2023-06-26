@@ -2,20 +2,35 @@ import { movies } from "../services/movies";
 import Wrapper from "../components/Wrapper";
 import { useEffect, useState } from "react";
 import VideoJS from "../components/Videojs";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { shuffle } from "../utils/utils";
-import MovieChart from "../components/MovieChart";
+import MovieChart2 from "../components/MovieChart2";
 import { shows } from "../services/shows";
 import MovieInfo from "../components/MovieInfo";
 import MovieSource from "../components/MovieSource";
 import MovieCast from "../components/MovieCast";
+import Loading from "../components/Loading";
 const Movies = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState(undefined);
+  const [loading, setLoading] = useState(false);
+  const path = useLocation();
   useEffect(() => {
     const exist = movies.find((item) => item.id === id);
     setMovie(exist);
   }, [id]);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2500);
+  }, [path]);
+
+  if (loading) {
+    return <Loading />;
+  }
+
   if (movie === undefined) {
     return <h1>404</h1>;
   }
@@ -48,11 +63,11 @@ const Movies = () => {
         <MovieSource movie={movie} />
         <MovieCast movie={movie} />
       </Wrapper>
-      <MovieChart
+      <MovieChart2
         title="Related Movies & Shows"
         list={shuffle([...movies, ...shows]).slice(0, 10)}
       />
-      <MovieChart
+      <MovieChart2
         title="Recommended For You"
         list={shuffle([...movies, ...shows]).slice(0, 10)}
       />

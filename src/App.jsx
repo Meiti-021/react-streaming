@@ -4,10 +4,12 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Movies from "./pages/Movies";
+import ScrollToTop from "./components/ScrollToTop";
 function App() {
   return (
     <div className="font-roboto">
       <BrowserRouter>
+        <ScrollToTop />
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
