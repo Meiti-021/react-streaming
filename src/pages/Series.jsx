@@ -76,6 +76,22 @@ const Series = () => {
         </div>
 
         <MovieInfo movie={show} season={season} episode={episode} />
+        <select
+          name=""
+          id=""
+          className="w-40 h-8 bg-black -mb-10 px-2"
+          onInput={(e) => {
+            setSeason(+e.target.value);
+          }}
+        >
+          {show.series.map((item, index) => {
+            return (
+              <option value={index} key={item.title}>
+                Season {index + 1}
+              </option>
+            );
+          })}
+        </select>
         <ShowSource
           movie={show}
           season={season}
