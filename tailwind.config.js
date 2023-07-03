@@ -32,6 +32,7 @@ export default {
       "2xl": "1538px",
       "3xl": "1638px",
       md: "768px",
+      mdp: "900px",
     },
   },
   plugins: [],
