@@ -4,6 +4,7 @@ import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
 import Wrapper from "../components/Wrapper";
 import Plan from "../components/Plan";
+import AccountDetails from "../components/AccountDetails";
 const steps = ["Select Plan", "Acccount Detaile", "Order Summury"];
 const plans = [
   {
@@ -137,7 +138,7 @@ const Registery = () => {
             })}
           </div>
         ) : activeStep === 1 ? (
-          <div className="">2</div>
+          <AccountDetails myPlan={myPlan} />
         ) : (
           <div className="">3</div>
         )}
