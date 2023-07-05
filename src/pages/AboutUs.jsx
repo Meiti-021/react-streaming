@@ -100,7 +100,7 @@ const AboutUs = () => {
         </div>
       </div>
       <div className="bg-black p-10 py-10">
-        <h2 className="text-3xl sm:text-5xl text-center my-10">
+        <h2 className="text-3xl sm:text-5xl text-center my-20">
           Work With the Best
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-20 max-w-7xl mx-auto">

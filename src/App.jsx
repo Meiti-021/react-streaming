@@ -9,6 +9,7 @@ import Series from "./pages/Series";
 import Login from "./pages/Login";
 import Registery from "./pages/Registery";
 import AboutUs from "./pages/AboutUs";
+import Contact1 from "./pages/Contact1";
 function App() {
   return (
     <div className="font-roboto">
@@ -22,6 +23,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/registery" element={<Registery />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/contact" element={<Contact1 />} />
         </Routes>
         <Footer />
       </BrowserRouter>
