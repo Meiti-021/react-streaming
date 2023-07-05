@@ -1,3 +1,23 @@
 .vjs-poster {
   background-size: cover !important;
 }
+
+#Layer_1,
+#Layer_3 {
+  fill: #cecdcc;
+}
+
+.st1,
+.st2,
+.st4 {
+  fill: #cecdcc;
+}
+
+.st5,
+.st8,
+.st9,
+.st11,
+.st13,
+.st0 {
+  fill: red;
+}
