@@ -8,6 +8,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Series from "./pages/Series";
 import Login from "./pages/Login";
 import Registery from "./pages/Registery";
+import AboutUs from "./pages/AboutUs";
 function App() {
   return (
     <div className="font-roboto">
@@ -20,6 +21,7 @@ function App() {
           <Route path="/series/:id" element={<Series />} />
           <Route path="/login" element={<Login />} />
           <Route path="/registery" element={<Registery />} />
+          <Route path="/about" element={<AboutUs />} />
         </Routes>
         <Footer />
       </BrowserRouter>
