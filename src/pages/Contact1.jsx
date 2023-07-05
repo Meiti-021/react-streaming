@@ -2,17 +2,17 @@ import Page from "../components/Page";
 import { IconMail, IconPhone, IconPin } from "../utils/icons";
 const info = [
   {
-    icon: <IconPin className="h-12 w-12" />,
+    icon: <IconPin className="h-16 w-16" />,
     title: "Address",
     info: "Tabriz/Iran",
   },
   {
-    icon: <IconPhone className="h-12 w-12" />,
+    icon: <IconPhone className="h-16 w-16" />,
     title: "Anytime Call",
     info: "0413-288-88-88",
   },
   {
-    icon: <IconMail className="h-12 w-12" />,
+    icon: <IconMail className="h-16 w-16" />,
     title: "Email Us",
     info: "support@meitiflix.com",
   },
