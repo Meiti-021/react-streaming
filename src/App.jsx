@@ -14,6 +14,7 @@ import Contact2 from "./pages/Contact2";
 import FAQ from "./pages/FAQ";
 import Policy from "./pages/Policy";
 import Movie from "./pages/Movie";
+import Movie2 from "./pages/Movie2";
 function App() {
   return (
     <div className="font-roboto">
@@ -24,6 +25,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/movies/:id" element={<Movies />} />
           <Route path="/movies" element={<Movie />} />
+          <Route path="/movies/load-more" element={<Movie2 />} />
           <Route path="/series/:id" element={<Series />} />
           <Route path="/login" element={<Login />} />
           <Route path="/registery" element={<Registery />} />
