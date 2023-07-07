@@ -10,6 +10,7 @@ import {
   IconShare,
   IconTwitter,
 } from "../utils/icons";
+import { Link } from "react-router-dom";
 const MovieCard3 = ({ timing, title, likes, bgImage, id }) => {
   const [mouseIn, setMouseIn] = useState(false);
   const [isHoverHeart, setIsHoverHeart] = useState(false);
@@ -37,9 +38,12 @@ const MovieCard3 = ({ timing, title, likes, bgImage, id }) => {
         <div className="flex flex-col gap-4">
           <p className="">{title}</p>
           <p className="">{timing}</p>
-          <button className="h-10 text-sm w-36 bg-light-red rounded flex justify-center items-center gap-1">
+          <Link
+            to={`/movies/${id}`}
+            className="h-10 text-sm w-36 bg-light-red rounded flex justify-center items-center gap-1"
+          >
             <IconPlay /> PLAY NOW
-          </button>
+          </Link>
         </div>
         <div
           className={`flex flex-col transition-all duration-500 justify-center items-center gap-3 ${
