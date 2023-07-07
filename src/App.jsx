@@ -13,6 +13,7 @@ import Contact1 from "./pages/Contact1";
 import Contact2 from "./pages/Contact2";
 import FAQ from "./pages/FAQ";
 import Policy from "./pages/Policy";
+import Movie from "./pages/Movie";
 function App() {
   return (
     <div className="font-roboto">
@@ -22,9 +23,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/movies/:id" element={<Movies />} />
+          <Route path="/movies" element={<Movie />} />
           <Route path="/series/:id" element={<Series />} />
           <Route path="/login" element={<Login />} />
           <Route path="/registery" element={<Registery />} />
+          <Route path="/pmp-pricing-plan" element={<Registery />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<Contact1 />} />
           <Route path="/contact2" element={<Contact2 />} />
