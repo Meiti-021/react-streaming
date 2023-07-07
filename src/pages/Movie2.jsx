@@ -6,7 +6,7 @@ import { shows } from "../services/shows";
 const Movie2 = () => {
   const [page, setPage] = useState(6);
   return (
-    <Page title="movies">
+    <Page title="movies > Load-more">
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
         {[...movies, ...shows].slice(0, page).map((item) => {
           return <MovieCard3 {...item} key={item.id + "movie-chart"} />;
