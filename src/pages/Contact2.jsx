@@ -1,4 +1,3 @@
-import React from "react";
 import Page from "../components/Page";
 import { IconFacebook, IconInstagram, IconLinkedin } from "../utils/icons";
 const Contact2 = () => {

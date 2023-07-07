@@ -11,6 +11,7 @@ import Registery from "./pages/Registery";
 import AboutUs from "./pages/AboutUs";
 import Contact1 from "./pages/Contact1";
 import Contact2 from "./pages/Contact2";
+import FAQ from "./pages/FAQ";
 function App() {
   return (
     <div className="font-roboto">
@@ -26,6 +27,7 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<Contact1 />} />
           <Route path="/contact2" element={<Contact2 />} />
+          <Route path="/faqs" element={<FAQ />} />
         </Routes>
         <Footer />
       </BrowserRouter>
