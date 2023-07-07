@@ -12,6 +12,7 @@ import AboutUs from "./pages/AboutUs";
 import Contact1 from "./pages/Contact1";
 import Contact2 from "./pages/Contact2";
 import FAQ from "./pages/FAQ";
+import Policy from "./pages/Policy";
 function App() {
   return (
     <div className="font-roboto">
@@ -28,6 +29,7 @@ function App() {
           <Route path="/contact" element={<Contact1 />} />
           <Route path="/contact2" element={<Contact2 />} />
           <Route path="/faqs" element={<FAQ />} />
+          <Route path="/privacy-policy" element={<Policy />} />
         </Routes>
         <Footer />
       </BrowserRouter>
