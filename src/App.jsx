@@ -16,6 +16,7 @@ import Policy from "./pages/Policy";
 import Movie from "./pages/Movie";
 import Movie2 from "./pages/Movie2";
 import Movie3 from "./pages/Movie3";
+import Error from "./pages/Error";
 function App() {
   return (
     <div className="font-roboto">
@@ -37,6 +38,7 @@ function App() {
           <Route path="/contact2" element={<Contact2 />} />
           <Route path="/faqs" element={<FAQ />} />
           <Route path="/privacy-policy" element={<Policy />} />
+          <Route path="*" element={<Error />} />
         </Routes>
         <Footer />
       </BrowserRouter>
