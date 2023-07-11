@@ -39,7 +39,7 @@ const Blog = () => {
           <div className="p-10 flex  flex-col  bg-gradient-to-b from-dark-gray to-black">
             <p className="text-2xl font-semibold">Recent Posts </p>
             <div className="flex flex-col gap-8 mt-10">
-              {blogs.slice(0, 3).map((item, index) => {
+              {blogs.slice(0, 3).map((item) => {
                 return (
                   <div
                     className="flex items-center gap-5"

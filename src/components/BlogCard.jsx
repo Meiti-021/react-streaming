@@ -35,7 +35,7 @@ const BlogCard = ({
       <p className="text-4xl">{title}</p>
       <p className="text-gray">{subtitle}</p>
       <Link
-        to={`/movies/${id}`}
+        to={`/blog/${id}`}
         className="h-12  w-44 bg-light-red rounded flex justify-center items-center gap-1"
       >
         READ MORE <ArrowRight />
@@ -69,10 +69,11 @@ BlogCard.propTypes = {
   id: PropTypes.string,
   date: PropTypes.string,
   author: PropTypes.string,
-  categorie: PropTypes.string,
+  categories: PropTypes.string,
   tags: PropTypes.string,
   title: PropTypes.string,
   subtitle: PropTypes.string,
+  index: PropTypes.number,
 };
 
 export default BlogCard;

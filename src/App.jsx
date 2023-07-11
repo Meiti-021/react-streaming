@@ -19,6 +19,7 @@ import Movie3 from "./pages/Movie3";
 import Error from "./pages/Error";
 import Error2 from "./pages/Error2";
 import Blog from "./pages/Blog";
+import SingleBlog from "./pages/SingleBlog";
 function App() {
   return (
     <div className="font-roboto">
@@ -30,7 +31,7 @@ function App() {
           <Route path="/error2" element={<Error2 />} />
           <Route path="/movies/:id" element={<Movies />} />
           <Route path="/blog" element={<Blog />} />
-          {/* <Route path="/movies/:id" element={<Movies />} /> */}
+          <Route path="/blog/:id" element={<SingleBlog />} />
           <Route path="/movies" element={<Movie />} />
           <Route path="/movies/load-more" element={<Movie2 />} />
           <Route path="/movies/infinite" element={<Movie3 />} />
