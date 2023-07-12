@@ -24,6 +24,7 @@ import BlogGrid from "./pages/BlogGrid";
 import BlogSideBar from "./pages/BlogSideBar";
 import BlogPagination from "./pages/BlogPagination";
 import BlogLoadMore from "./pages/BlogLoadMore";
+import BlogInfiniteScroll from "./pages/BlogInfiniteScroll";
 function App() {
   return (
     <div className="font-roboto">
@@ -35,6 +36,10 @@ function App() {
           <Route path="/error2" element={<Error2 />} />
           <Route path="/movies/:id" element={<Movies />} />
           <Route path="/blog" element={<Blog />} />
+          <Route
+            path="/blog-infinite-scroll"
+            element={<BlogInfiniteScroll />}
+          />
           <Route path="/blog-load-more" element={<BlogLoadMore />} />
           <Route path="/blog-pagination" element={<BlogPagination />} />
           <Route path="/blog-right-sidebar" element={<Blog />} />
