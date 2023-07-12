@@ -470,6 +470,38 @@ export const IconReplay = ({ className = "h-6 w-6 " }) => {
     </svg>
   );
 };
+export const IconPause = ({ className = "h-6 w-6 " }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className={className}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M15.75 5.25v13.5m-7.5-13.5v13.5"
+      />
+    </svg>
+  );
+};
+export const IconNext = ({ className = "h-6 w-6 " }) => {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
+      <path d="M7 7v10l7-5zm9 10V7h-2v10z" />
+    </svg>
+  );
+};
+export const IconPrev = ({ className = "h-6 w-6 " }) => {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
+      <path d="M16 7l-7 5 7 5zm-7 5V7H7v10h2z" />
+    </svg>
+  );
+};
 export const FilmDirector = () => {
   return (
     <svg

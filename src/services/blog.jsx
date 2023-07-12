@@ -1,4 +1,12 @@
-import { IconShare } from "../utils/icons";
+import { IconLink } from "../utils/icons";
+import Audio from "../components/Audio";
+const musicData = {
+  image:
+    "https://images.mubicdn.net/images/film/89573/cache-122457-1649194960/image-w1280.jpg?size=800x",
+  file: "https://ts2.tarafdari.com/contents/user356177/content-sound/una_mattina.mp3",
+  name: "Una Mattina",
+  title: "Ludovico Einaudi",
+};
 export const blogs = [
   {
     id: "blog-1",
@@ -68,7 +76,7 @@ export const blogs = [
       <div className="text-gray flex flex-col gap-5">
         <p>
           <a href="#" className="block text-light-red">
-            <IconShare className="h-20 w-20" />
+            <IconLink className="h-20 w-20" />
           </a>
         </p>
         <p>
@@ -126,6 +134,9 @@ export const blogs = [
     tags: "thrill ,Thriller ,Trailers ,Tv ,Rumors TV ,Series",
     body: (
       <div className="text-gray flex flex-col gap-5">
+        <div className="">
+          <Audio {...musicData} />
+        </div>
         <p>
           Nam vulputate libero quis nisi euismod rhoncus. Sed eu euismod felis.
           Aenean ullamcorper dapibus odio ac tempor. Aliquam iaculis, quam vitae

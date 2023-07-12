@@ -21,3 +21,36 @@
 .st0 {
   fill: red;
 }
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.component {
+  width: 100%;
+  margin: 1em auto;
+  border: 0.1px solid black;
+}
+
+.playButton {
+  background: none;
+  border: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline {
+  width: 80%;
+  background-color: #27ae60;
+}
+
+input[type="range"] {
+  background-color: #27ae60;
+}
+
+@media (max-width: 900px) {
+  .component {
+    width: 50%;
+  }
+}
