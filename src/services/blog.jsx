@@ -1,4 +1,4 @@
-import { IconLink } from "../utils/icons";
+import { IconLink, IconQuote } from "../utils/icons";
 import Audio from "../components/Audio";
 import VideoJS from "../components/Videojs";
 const musicData = {
@@ -266,6 +266,19 @@ export const blogs = [
     tags: "Tv ,Rumors TV ,Series",
     body: (
       <div className="text-gray flex flex-col gap-5">
+        <div className="flex flex-col gap-5 px-5 items-center py-10 border-l-2 border-light-red rounded-md my-5 bg-dark-gray">
+          <p className="text-[rgba(255,255,255,0.1)] relative -bottom-5">
+            <IconQuote className="w-20 h-20" />
+          </p>
+          <p className="italic text-gray text-center text-lg">
+            “ Movies can and do have tremendous influence in shaping young lives
+            in the realm of entertainment towards the ideals and objectives of
+            normal adulthood. ”
+          </p>
+          <p className="text-sm items-center px-5 justify-center gap-1 py-2 flex border-l-3 w-fit pl-1 border-light-red bg-gradient-to-r from-dark-red to-dark-gray italic ">
+            Walt Disney
+          </p>
+        </div>
         <p>
           Nam vulputate libero quis nisi euismod rhoncus. Sed eu euismod felis.
           Aenean ullamcorper dapibus odio ac tempor. Aliquam iaculis, quam vitae
