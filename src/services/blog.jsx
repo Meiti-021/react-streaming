@@ -345,6 +345,38 @@ export const blogs = [
           ligula tellus, malesuada eu ultrices vel, vulputate sit amet metus.
           Donec tincidunt sapien ut enim feugiat, sed egestas dolor ornare.
         </p>
+        <div className="h-auto grid grid-cols-2 md:grid-cols-3 gap-5 mb-5">
+          <img
+            src="/assets/blogs/blog-1.webp"
+            alt=""
+            className="w-full h-full object-cover block"
+          />
+          <img
+            src="/assets/blogs/blog-2.webp"
+            alt=""
+            className="w-full h-full object-cover block"
+          />
+          <img
+            src="/assets/blogs/blog-3.webp"
+            alt=""
+            className="w-full h-full object-cover block"
+          />
+          <img
+            src="/assets/blogs/blog-4.webp"
+            alt=""
+            className="w-full h-full object-cover block"
+          />
+          <img
+            src="/assets/blogs/blog-5.webp"
+            alt=""
+            className="w-full h-full object-cover block"
+          />
+          <img
+            src="/assets/blogs/blog-8.webp"
+            alt=""
+            className="w-full h-full object-cover block"
+          />
+        </div>
         <div className="rounded border-l-3 border-light-red bg-slate-500 text-white py-5 px-10">
           <p>
             \”Simon Doe has his tongue planted in his cheek as he describes the
