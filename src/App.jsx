@@ -20,6 +20,7 @@ import Error from "./pages/Error";
 import Error2 from "./pages/Error2";
 import Blog from "./pages/Blog";
 import SingleBlog from "./pages/SingleBlog";
+import BlogGrid from "./pages/BlogGrid";
 function App() {
   return (
     <div className="font-roboto">
@@ -31,6 +32,7 @@ function App() {
           <Route path="/error2" element={<Error2 />} />
           <Route path="/movies/:id" element={<Movies />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog-grid/:column" element={<BlogGrid />} />
           <Route path="/blog/:id" element={<SingleBlog />} />
           <Route path="/movies" element={<Movie />} />
           <Route path="/movies/load-more" element={<Movie2 />} />
