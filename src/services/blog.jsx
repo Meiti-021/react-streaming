@@ -1,5 +1,6 @@
 import { IconLink } from "../utils/icons";
 import Audio from "../components/Audio";
+import VideoJS from "../components/Videojs";
 const musicData = {
   image:
     "https://images.mubicdn.net/images/film/89573/cache-122457-1649194960/image-w1280.jpg?size=800x",
@@ -203,6 +204,24 @@ export const blogs = [
           ligula tellus, malesuada eu ultrices vel, vulputate sit amet metus.
           Donec tincidunt sapien ut enim feugiat, sed egestas dolor ornare.
         </p>
+        <VideoJS
+          options={{
+            autoplay: false,
+            controls: true,
+            responsive: true,
+            fluid: false,
+            sources: [
+              {
+                src: "https://archive.org/download/GameOfThronesSeason1Trailer/Game%20of%20Thrones%20Season%201%20Trailer.mp4",
+                type: "video/mp4",
+              },
+            ],
+
+            poster:
+              "https://e3.365dm.com/21/04/768x432/skynews-house-of-the-dragon_5357594.jpg?20210427114904",
+            aspectRatio: "16:9",
+          }}
+        />
         <div className="rounded border-l-3 border-light-red bg-slate-500 text-white py-5 px-10">
           <p>
             \”Simon Doe has his tongue planted in his cheek as he describes the
