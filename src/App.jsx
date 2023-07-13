@@ -26,6 +26,7 @@ import BlogPagination from "./pages/BlogPagination";
 import BlogLoadMore from "./pages/BlogLoadMore";
 import BlogInfiniteScroll from "./pages/BlogInfiniteScroll";
 import { SnackbarProvider } from "notistack";
+import Cast from "./pages/Cast";
 function App() {
   return (
     <div className="font-roboto">
@@ -48,6 +49,7 @@ function App() {
           <Route path="/blog-left-sidebar" element={<BlogSideBar />} />
           <Route path="/blog-grid/:column" element={<BlogGrid />} />
           <Route path="/blog/:id" element={<SingleBlog />} />
+          <Route path="/cast/:id" element={<Cast />} />
           <Route path="/movies" element={<Movie />} />
           <Route path="/movies/load-more" element={<Movie2 />} />
           <Route path="/movies/infinite" element={<Movie3 />} />
