@@ -16,7 +16,6 @@ import {
 } from "../utils/icons";
 import { useDispatch, useSelector } from "react-redux";
 import { createWatchlist, setCurrentList } from "../data/moviesSlice";
-import { useEffect } from "react";
 
 const MovieInfo = ({ movie, season, episode }) => {
   const { watchList, currentPlayList } = useSelector(
@@ -24,15 +23,9 @@ const MovieInfo = ({ movie, season, episode }) => {
   );
   const dispatch = useDispatch();
   const playlistRef = useRef(null);
-  const [list, setList] = useState([watchList[currentPlayList]]);
-  const [newList, setNewList] = useState(list[0].name);
+  const [newList, setNewList] = useState(watchList[currentPlayList].name);
   const [readOnly, setReadOnly] = useState(true);
   const [playlistOpen, setPlaylistOpen] = useState(false);
-  const [activeList, setActiveList] = useState(list[0]);
-  useEffect(() => {
-    console.log("watch:", watchList);
-    console.log("currentPlayList:", currentPlayList);
-  }, [watchList, currentPlayList]);
   return (
     <div className="flex lg:flex-row flex-col h-auto gap-10 justify-between my-7">
       <div className="flex flex-col gap-10 xs:h-72 justify-between ">

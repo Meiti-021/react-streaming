@@ -25,9 +25,11 @@ import BlogSideBar from "./pages/BlogSideBar";
 import BlogPagination from "./pages/BlogPagination";
 import BlogLoadMore from "./pages/BlogLoadMore";
 import BlogInfiniteScroll from "./pages/BlogInfiniteScroll";
+import { SnackbarProvider } from "notistack";
 function App() {
   return (
     <div className="font-roboto">
+      <SnackbarProvider />
       <BrowserRouter>
         <ScrollToTop />
         <Header />

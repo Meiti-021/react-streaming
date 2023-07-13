@@ -46,6 +46,7 @@ const reviews = [
   },
 ];
 import { useMediaQuery } from "@mui/material";
+import { enqueueSnackbar } from "notistack";
 const ShowSource = ({ movie, season, setEpisode, episode }) => {
   const sm = useMediaQuery("(min-width: 640px)");
   const [value, setValue] = useState(0);
@@ -136,7 +137,17 @@ const ShowSource = ({ movie, season, setEpisode, episode }) => {
                 <Comment {...item} key={item.user.id + "comment" + index} />
               );
             })}
-            <form action="#" className="grid grid-cols-2 gap-4">
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                enqueueSnackbar({
+                  variant: "error",
+                  message:
+                    "You should login to your account to be able to send review on this section!",
+                });
+              }}
+              className="grid grid-cols-2 gap-4"
+            >
               <p className="text-2xl col-span-2"> Add a review</p>
               <p className="text-sm text-gray col-span-2">
                 Your email address will not be published. Required fields are
@@ -183,7 +194,7 @@ const ShowSource = ({ movie, season, setEpisode, episode }) => {
                   email: <sup className="text-light-red">*</sup>
                 </p>
                 <input
-                  type="text"
+                  type="email"
                   className="bg-black w-full h-12 border-none outline-none p-3 focus:border-none"
                   value={review.user.id}
                   onChange={(e) => {
@@ -225,7 +236,10 @@ const ShowSource = ({ movie, season, setEpisode, episode }) => {
                   time i comment
                 </label>
               </div>
-              <button className="w-40 rounded-sm  h-12 bg-light-red">
+              <button
+                className="w-40 rounded-sm  h-12 bg-light-red"
+                type="submit"
+              >
                 SUBMIT
               </button>
             </form>
