@@ -38,7 +38,7 @@ const MovieCast = ({ movie }) => {
                 className="relative bg-dark-gray  w-full h-72 flex justify-center items-center"
                 key={"cast-movie-item" + index + item.id}
               >
-                <Link to="/" className="flex w-full flex-col">
+                <Link to={`/cast/${item.id}`} className="flex w-full flex-col">
                   <img
                     src={`/assets/casts/${item.id}.webp`}
                     alt=""

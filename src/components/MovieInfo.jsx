@@ -9,13 +9,18 @@ import {
   ArrowUp,
   IconDownload,
   IconHeart,
+  IconHeartFill,
   IconPlus,
   IconShare,
   IconTag,
   IconTick,
 } from "../utils/icons";
 import { useDispatch, useSelector } from "react-redux";
-import { createWatchlist, setCurrentList } from "../data/moviesSlice";
+import {
+  createWatchlist,
+  likeMovie,
+  setCurrentList,
+} from "../data/moviesSlice";
 
 const MovieInfo = ({ movie, season, episode }) => {
   const { watchList, currentPlayList } = useSelector(
@@ -75,8 +80,17 @@ const MovieInfo = ({ movie, season, episode }) => {
               className="h-11 w-11 rounded-full p-1 bg-slate-400"
               title={`+ ${movie.likes}`}
             >
-              <button className="w-full rounded-full h-full flex justify-center items-center bg-white text-light-red">
-                <IconHeart />
+              <button
+                className="w-full rounded-full h-full flex justify-center items-center bg-white text-light-red"
+                onClick={() => {
+                  dispatch(likeMovie(movie.id));
+                }}
+              >
+                {movie.liked ? (
+                  <IconHeartFill className="w-4 h-4 text-light-red" />
+                ) : (
+                  <IconHeart className="w-4 h-4 " />
+                )}
               </button>
             </div>
             <div

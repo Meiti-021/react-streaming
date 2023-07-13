@@ -1,25 +1,26 @@
-import { movies } from "../services/movies";
 import Wrapper from "../components/Wrapper";
 import { useEffect, useState } from "react";
 import VideoJS from "../components/Videojs";
 import { useLocation, useParams } from "react-router-dom";
 import { shuffle } from "../utils/utils";
 import MovieChart2 from "../components/MovieChart2";
-import { shows } from "../services/shows";
 import MovieInfo from "../components/MovieInfo";
 import MovieSource from "../components/MovieSource";
 import MovieCast from "../components/MovieCast";
 import Loading from "../components/Loading";
 import { IconLock } from "../utils/icons";
+import { useSelector } from "react-redux";
 const Movies = () => {
   const { id } = useParams();
+  const { movies, shows } = useSelector((store) => store.movieData);
+
   const [movie, setMovie] = useState(undefined);
   const [loading, setLoading] = useState(false);
   const path = useLocation();
   useEffect(() => {
     const exist = movies.find((item) => item.id === id);
     setMovie(exist);
-  }, [id]);
+  }, [id, movies, shows]);
 
   useEffect(() => {
     setLoading(true);

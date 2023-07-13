@@ -3,6 +3,7 @@ import { useState } from "react";
 import {
   IconFacebook,
   IconHeart,
+  IconHeartFill,
   IconLink,
   IconPlay,
   IconPlus,
@@ -10,10 +11,13 @@ import {
   IconTwitter,
 } from "../utils/icons";
 import { Link } from "react-router-dom";
-const MovieCard3 = ({ timing, title, likes, bgImage, id }) => {
+import { useDispatch } from "react-redux";
+import { likeMovie } from "../data/moviesSlice";
+const MovieCard3 = ({ timing, title, likes, bgImage, id, liked }) => {
   const [mouseIn, setMouseIn] = useState(false);
   const [isHoverHeart, setIsHoverHeart] = useState(false);
   const [isHoverShare, setIsHoverShare] = useState(false);
+  const dispatch = useDispatch();
   return (
     <div
       className={`relative w-full h-60  bg-center`}
@@ -38,7 +42,7 @@ const MovieCard3 = ({ timing, title, likes, bgImage, id }) => {
           <p className="">{title}</p>
           <p className="">{timing}</p>
           <Link
-            to={`/movies/${id}`}
+            to={timing === "Tv Series" ? `/series/${id}` : `/movies/${id}`}
             className="h-10 text-sm w-36 bg-light-red rounded flex justify-center items-center gap-1"
           >
             <IconPlay /> PLAY NOW
@@ -60,9 +64,18 @@ const MovieCard3 = ({ timing, title, likes, bgImage, id }) => {
               setIsHoverHeart(false);
             }}
           >
-            <div className="w-full h-full rounded-full flex justify-center items-center bg-white text-light-red hover:bg-light-red hover:text-white transition-all duration-500">
-              <IconHeart />
-            </div>
+            <button
+              className="w-full h-full rounded-full flex justify-center items-center bg-white text-light-red hover:bg-light-red hover:text-white transition-all duration-500"
+              onClick={() => {
+                dispatch(likeMovie(id));
+              }}
+            >
+              {liked ? (
+                <IconHeartFill className="w-4 h-4 text-light-red" />
+              ) : (
+                <IconHeart className="w-4 h-4 " />
+              )}
+            </button>
             <div
               className={`absolute p-3 flex justify-center items-center w-auto h-9 rounded -left-14 bg-black text-sm transition-all duration-500 ${
                 isHoverHeart
@@ -120,5 +133,6 @@ MovieCard3.propTypes = {
   id: PropTypes.string,
   title: PropTypes.string,
   likes: PropTypes.number,
+  liked: PropTypes.bool,
 };
 export default MovieCard3;

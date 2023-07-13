@@ -2,14 +2,13 @@ import Wrapper from "./Wrapper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { movies } from "../services/movies";
 import { Navigation } from "swiper";
 import { useRef } from "react";
 import { ArrowLeft, ArrowRight } from "../utils/icons";
 import { useMediaQuery } from "@mui/material";
-import MovieCard2 from "./MovieCard2";
 import PropTypes from "prop-types";
-const MovieChart2 = ({ title = "need a title", list = movies }) => {
+import MovieCard3 from "./MovieCard3";
+const MovieChart2 = ({ title = "need a title", list }) => {
   const swiperRef = useRef(null);
   const xl = useMediaQuery("(min-width: 1400px)");
   const lg = useMediaQuery("(min-width: 1227px)");
@@ -34,7 +33,7 @@ const MovieChart2 = ({ title = "need a title", list = movies }) => {
                 className="relative  w-full h-56 flex justify-center items-center"
                 key={"hero-swiper-sm" + index + item.id}
               >
-                <MovieCard2 {...item} />
+                <MovieCard3 {...item} />
               </SwiperSlide>
             );
           })}

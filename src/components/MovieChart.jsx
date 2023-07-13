@@ -2,14 +2,13 @@ import Wrapper from "./Wrapper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { movies } from "../services/movies";
 import { Navigation } from "swiper";
 import { useRef } from "react";
 import { ArrowLeft, ArrowRight } from "../utils/icons";
 import { useMediaQuery } from "@mui/material";
 import MovieCard from "./MovieCard";
 import PropTypes from "prop-types";
-const MovieChart = ({ title = "need a title", list = movies }) => {
+const MovieChart = ({ title = "need a title", list }) => {
   const swiperRef = useRef(null);
   const xl = useMediaQuery("(min-width: 1400px)");
   const lg = useMediaQuery("(min-width: 1227px)");

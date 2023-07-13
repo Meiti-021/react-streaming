@@ -1,18 +1,18 @@
-import { movies } from "../services/movies";
 import Wrapper from "../components/Wrapper";
 import { useEffect, useState } from "react";
 import VideoJS from "../components/Videojs";
 import { useLocation, useParams } from "react-router-dom";
 import { shuffle } from "../utils/utils";
 import MovieChart2 from "../components/MovieChart2";
-import { shows } from "../services/shows";
 import MovieInfo from "../components/MovieInfo";
 import MovieCast from "../components/MovieCast";
 import Loading from "../components/Loading";
 import { IconLock } from "../utils/icons";
 import ShowSource from "../components/ShowSource";
+import { useSelector } from "react-redux";
 const Series = () => {
   const { id } = useParams();
+  const { movies, shows } = useSelector((store) => store.movieData);
   const [show, setShow] = useState(undefined);
   const [episode, setEpisode] = useState(0);
   const [season, setSeason] = useState(0);
@@ -21,7 +21,7 @@ const Series = () => {
   useEffect(() => {
     const exist = shows.find((item) => item.id === id);
     setShow(exist);
-  }, [id]);
+  }, [id, movies, shows]);
 
   useEffect(() => {
     setLoading(true);

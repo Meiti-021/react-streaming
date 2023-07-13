@@ -1,10 +1,11 @@
 import { useState } from "react";
 import MovieCard3 from "../components/MovieCard3";
 import Page from "../components/Page";
-import { movies } from "../services/movies";
-import { shows } from "../services/shows";
 import { Pagination } from "@mui/material";
+import { useSelector } from "react-redux";
 const Movie = () => {
+  const { movies, shows } = useSelector((store) => store.movieData);
+
   const [page, setPage] = useState(0);
   return (
     <Page title="movies">

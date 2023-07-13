@@ -1,29 +1,16 @@
 import Wrapper from "../components/Wrapper";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { cast } from "../services/cast";
 import { useState } from "react";
 import { useEffect } from "react";
-import { movies } from "../services/movies";
-import { shows } from "../services/shows";
 import MovieCard3 from "../components/MovieCard3";
 import { IconFacebook, IconInstagram, IconLinkedin } from "../utils/icons";
 import { Tab, Tabs, useMediaQuery } from "@mui/material";
-var month = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
+import { useSelector } from "react-redux";
 const Cast = () => {
   const { id } = useParams();
+  const { movies, shows } = useSelector((store) => store.movieData);
+
   const [artist, setArtist] = useState(null);
   const [movie, setMovie] = useState([]);
   const [show, setShow] = useState([]);
@@ -46,7 +33,7 @@ const Cast = () => {
     setArtist(crew);
     setMovie(arrayMovie);
     setShow(arrayShow);
-  }, [id]);
+  }, [id, movies, shows]);
   if (artist === null) {
     return <>hi</>;
   }
@@ -148,7 +135,12 @@ const Cast = () => {
               : [...show]
             ).map((item, index) => {
               return (
-                <div
+                <Link
+                  to={
+                    item.timing === "Tv Series"
+                      ? `/series/${item.id}`
+                      : `/movies/${item.id}`
+                  }
                   className="h-24 flex gap-5 w-full "
                   key={item.id + "cast-charts" + index}
                 >
@@ -164,7 +156,7 @@ const Cast = () => {
                       {item.casts.find((elem) => elem.id === id).role}
                     </p>
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>
