@@ -48,6 +48,7 @@ export const movies = [
     description:
       "An ex-hitman seeks vengeance against the mobsters who killed his dog and stole his car.John Wick is an American neo-noir action thriller media franchise created by Derek Kolstad and centered on John Wick, a former hitman who is forced back into the criminal underworld he had previously abandoned. ",
     likes: 985,
+    liked: false,
   },
   {
     id: "covenant",
@@ -89,6 +90,7 @@ export const movies = [
     description:
       "During the war in Afghanistan, a local interpreter risks his own life to carry an injured sergeant across miles of gruelling terrain. During the war in Afghanistan, a local interpreter risks his own life to carry an injured sergeant across miles of gruelling terrain.A group of young warlocks must confront an ancient evil force.",
     likes: 256,
+    liked: false,
   },
   {
     id: "mario",
@@ -143,6 +145,7 @@ export const movies = [
     description:
       "With help from Princess Peach, Mario gets ready to square off against the all-powerful Bowser to stop his plans from conquering the world. .A computer hacker discovers the true nature of reality and fights against intelligent machines.",
     likes: 1743,
+    liked: false,
   },
   {
     id: "interstellar",
@@ -197,6 +200,7 @@ export const movies = [
     description:
       "A team of explorers embarks on a voyage through a wormhole in space in an attempt to ensure humanity's survival.When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.",
     likes: 1237,
+    liked: false,
   },
   {
     id: "inception",
@@ -246,6 +250,7 @@ export const movies = [
     description:
       "Cobb steals information from his targets by entering their dreams. Saito offers to wipe clean Cobb's criminal history as payment for performing an inception on his sick competitor's son. A team of explorers embarks on a voyage through a wormhole in space in an attempt to ensure humanity's survival.",
     likes: 1237,
+    liked: false,
   },
   {
     id: "joker",
@@ -287,6 +292,7 @@ export const movies = [
     description:
       "Arthur Fleck, a party clown, leads an impoverished life with his ailing mother. However, when society shuns him and brands him as a freak, he decides to embrace the life of crime and chaos. .A mentally troubled comedian descends into madness and becomes a psychopathic criminal.",
     likes: 1985,
+    liked: false,
   },
   {
     id: "puss",
@@ -337,6 +343,7 @@ export const movies = [
     description:
       "The legendary Puss in Boots embarks on an adventure to steal magical beans. Puss in Boots discovers that his passion for adventure has taken its toll when he learns that he has burnt through eight of his nine lives. Puss sets out on an epic journey to find the mythical Last Wish and restore his nine lives.",
     likes: 512,
+    liked: false,
   },
   {
     id: "matrix",
@@ -377,5 +384,6 @@ export const movies = [
     description:
       "Thomas Anderson, a computer programmer, is led to fight an underground war against powerful computers who have constructed his entire reality with a system called the Matrix. .A computer hacker discovers the true nature of reality and fights against intelligent machines.",
     likes: 1743,
+    liked: false,
   },
 ];

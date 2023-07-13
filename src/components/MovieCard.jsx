@@ -2,6 +2,7 @@ import { useState } from "react";
 import {
   IconFacebook,
   IconHeart,
+  IconHeartFill,
   IconLink,
   IconPlay,
   IconShare,
@@ -9,11 +10,14 @@ import {
 } from "../utils/icons";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import { useDispatch } from "react-redux";
+import { likeMovie } from "../data/moviesSlice";
 
-const MovieCard = ({ timing, title, likes, thumbImage, id }) => {
+const MovieCard = ({ timing, title, likes, thumbImage, id, liked }) => {
   const [isHover, setIsHover] = useState(false);
   const [isHoverHeart, setIsHoverHeart] = useState(false);
   const [isHoverShare, setIsHoverShare] = useState(false);
+  const dispatch = useDispatch();
   return (
     <article
       className={`relative transition-all bg-dark-gray origin-center duration-300 h-[26rem] w-full ${
@@ -66,8 +70,17 @@ const MovieCard = ({ timing, title, likes, thumbImage, id }) => {
             onMouseEnter={() => setIsHoverHeart(true)}
             onMouseLeave={() => setIsHoverHeart(false)}
           >
-            <button className="bg-dark-gray w-8 h-8 p-1 flex justify-center items-center rounded-full">
-              <IconHeart className="w-4 h-4 " />
+            <button
+              className="bg-dark-gray w-8 h-8 p-1 flex justify-center items-center rounded-full"
+              onClick={() => {
+                dispatch(likeMovie(id));
+              }}
+            >
+              {liked ? (
+                <IconHeartFill className="w-4 h-4 text-light-red" />
+              ) : (
+                <IconHeart className="w-4 h-4 " />
+              )}
             </button>
             <div
               className={`absolute min-w-[2.5rem] whitespace-nowrap transition-all duration-150  text-sm font-bold flex justify-center items-center h-7 bg-darker-gray -top-8 rounded -left-1 ${
@@ -119,6 +132,7 @@ MovieCard.propTypes = {
   id: PropTypes.string,
   title: PropTypes.string,
   likes: PropTypes.number,
+  liked: PropTypes.bool,
 };
 
 export default MovieCard;

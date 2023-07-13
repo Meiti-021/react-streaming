@@ -4,7 +4,7 @@ import VideoJS from "../components/Videojs";
 const musicData = {
   image:
     "https://images.mubicdn.net/images/film/89573/cache-122457-1649194960/image-w1280.jpg?size=800x",
-  file: "https://ts2.tarafdari.com/contents/user356177/content-sound/una_mattina.mp3",
+  src: "https://ts2.tarafdari.com/contents/user356177/content-sound/una_mattina.mp3",
   name: "Una Mattina",
   title: "Ludovico Einaudi",
 };
