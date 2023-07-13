@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import {
   ArrowDown,
+  ArrowUp,
   IconDownload,
   IconHeart,
   IconPlus,
@@ -13,14 +14,25 @@ import {
   IconTag,
   IconTick,
 } from "../utils/icons";
+import { useDispatch, useSelector } from "react-redux";
+import { createWatchlist, setCurrentList } from "../data/moviesSlice";
+import { useEffect } from "react";
 
 const MovieInfo = ({ movie, season, episode }) => {
+  const { watchList, currentPlayList } = useSelector(
+    (store) => store.movieData
+  );
+  const dispatch = useDispatch();
   const playlistRef = useRef(null);
-  const [list, setList] = useState(["New play list"]);
-  const [newList, setNewList] = useState(list[0]);
+  const [list, setList] = useState([watchList[currentPlayList]]);
+  const [newList, setNewList] = useState(list[0].name);
   const [readOnly, setReadOnly] = useState(true);
   const [playlistOpen, setPlaylistOpen] = useState(false);
   const [activeList, setActiveList] = useState(list[0]);
+  useEffect(() => {
+    console.log("watch:", watchList);
+    console.log("currentPlayList:", currentPlayList);
+  }, [watchList, currentPlayList]);
   return (
     <div className="flex lg:flex-row flex-col h-auto gap-10 justify-between my-7">
       <div className="flex flex-col gap-10 xs:h-72 justify-between ">
@@ -110,18 +122,13 @@ const MovieInfo = ({ movie, season, episode }) => {
               }}
               onKeyDown={(e) => {
                 if (e.keyCode === 13 && !readOnly) {
-                  const myset = new Set([e.target.value, ...list]);
-
-                  setList(Array.from(myset));
-                  setActiveList(e.target.value);
+                  dispatch(createWatchlist(newList));
                   setReadOnly(true);
                 }
               }}
-              onBlur={(e) => {
+              onBlur={() => {
                 if (!readOnly) {
-                  const myset = new Set([e.target.value, ...list]);
-                  setList(Array.from(myset));
-                  setActiveList(e.target.value);
+                  dispatch(createWatchlist(newList));
                   setReadOnly(true);
                 }
               }}
@@ -134,7 +141,7 @@ const MovieInfo = ({ movie, season, episode }) => {
                 setPlaylistOpen(!playlistOpen);
               }}
             >
-              <ArrowDown />
+              {playlistOpen ? <ArrowUp /> : <ArrowDown />}
             </button>
             <div
               className={
@@ -144,29 +151,34 @@ const MovieInfo = ({ movie, season, episode }) => {
               }
               id="playlist"
             >
-              {list.slice(0, 3).map((item, index) => {
-                return (
-                  <button
-                    key={item + index}
-                    className="flex py-2 justify-between border-b-1 border-gray"
-                    onClick={() => {
-                      setActiveList(item);
-                    }}
-                  >
-                    {item}
-                    <div className="relative overflow-hidden ">
-                      <div className="relative z-10">
-                        <IconTick />
+              {watchList
+                .slice(-3)
+                .reverse()
+                .map((item, index) => {
+                  return (
+                    <button
+                      key={item.name + index}
+                      className="flex py-2 justify-between border-b-1 border-gray"
+                      onClick={() => {
+                        dispatch(setCurrentList(item.name));
+                      }}
+                    >
+                      {item.name}
+                      <div className="relative overflow-hidden ">
+                        <div className="relative z-10">
+                          <IconTick />
+                        </div>
+                        <div
+                          className={`w-full h-full bg-black duration-700 top-0 absolute z-20 transition-all ${
+                            item.id === currentPlayList
+                              ? " left-full"
+                              : "left-0"
+                          }`}
+                        ></div>
                       </div>
-                      <div
-                        className={`w-full h-full bg-black duration-700 top-0 absolute z-20 transition-all ${
-                          item === activeList ? " left-full" : "left-0"
-                        }`}
-                      ></div>
-                    </div>
-                  </button>
-                );
-              })}
+                    </button>
+                  );
+                })}
               <Link className="flex py-2 justify-between">
                 More list items ...
               </Link>

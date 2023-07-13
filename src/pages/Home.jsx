@@ -6,8 +6,6 @@ import ShowHero from "../components/ShowHero";
 import TopGenres from "../components/TopGenres";
 import TopMovies from "../components/TopMovies";
 import TopSeries from "../components/TopSeries";
-import { shuffle } from "../utils/utils";
-
 const Home = () => {
   const { movies, shows } = useSelector((store) => store.movieData);
   return (

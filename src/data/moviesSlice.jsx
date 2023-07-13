@@ -6,12 +6,12 @@ const initialState = {
   shows: shows,
   watchList: [
     {
-      id: "0",
-      name: "new play list",
+      id: 0,
+      name: "My Playlist",
       collection: [],
     },
   ],
-  currentPlayList: "0",
+  currentPlayList: 0,
 };
 
 const movieSlice = createSlice({
@@ -43,9 +43,29 @@ const movieSlice = createSlice({
         }
       }
     },
+    createWatchlist: (state, { payload }) => {
+      const isExist = state.watchList.find((item) => item.name === payload);
+      if (isExist) {
+        //
+      } else {
+        state.currentPlayList = state.watchList.length;
+        state.watchList.push({
+          id: state.watchList.length,
+          name: payload,
+          collection: [],
+        });
+      }
+    },
+    setCurrentList: (state, { payload }) => {
+      const currenIndex = state.watchList.findIndex(
+        (item) => item.name === payload
+      );
+      state.currentPlayList = currenIndex;
+    },
   },
 });
 
-export const { likeMovie } = movieSlice.actions;
+export const { likeMovie, setCurrentList, createWatchlist } =
+  movieSlice.actions;
 
 export default movieSlice.reducer;
