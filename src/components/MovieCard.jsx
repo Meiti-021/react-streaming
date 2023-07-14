@@ -11,7 +11,7 @@ import {
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
-import { likeMovie } from "../data/moviesSlice";
+import { addToWatchlist, likeMovie } from "../data/moviesSlice";
 
 const MovieCard = ({ timing, title, likes, thumbImage, id, liked }) => {
   const [isHover, setIsHover] = useState(false);
@@ -120,7 +120,14 @@ const MovieCard = ({ timing, title, likes, thumbImage, id, liked }) => {
           <p className="text-lg -mt-1 truncate">{title}</p>
           <p className="text-xs text-gray">{timing}</p>
         </div>
-        <p className="text-sm truncate">+ watchlist</p>
+        <button
+          className="text-sm truncate"
+          onClick={() => {
+            dispatch(addToWatchlist(id));
+          }}
+        >
+          + watchlist
+        </button>
       </div>
     </article>
   );

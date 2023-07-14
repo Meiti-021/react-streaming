@@ -12,7 +12,7 @@ import {
 } from "../utils/icons";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { likeMovie } from "../data/moviesSlice";
+import { addToWatchlist, likeMovie } from "../data/moviesSlice";
 const MovieCard3 = ({ timing, title, likes, bgImage, id, liked }) => {
   const [mouseIn, setMouseIn] = useState(false);
   const [isHoverHeart, setIsHoverHeart] = useState(false);
@@ -117,7 +117,12 @@ const MovieCard3 = ({ timing, title, likes, bgImage, id, liked }) => {
             </div>
           </div>
           <div className="w-14 h-14 cursor-pointer bg-gray p-2 rounded-full">
-            <div className="w-full h-full rounded-full flex justify-center items-center bg-white text-light-red hover:bg-light-red hover:text-white transition-all duration-500">
+            <div
+              className="w-full h-full rounded-full flex justify-center items-center bg-white text-light-red hover:bg-light-red hover:text-white transition-all duration-500"
+              onClick={() => {
+                dispatch(addToWatchlist(id));
+              }}
+            >
               <IconPlus />
             </div>
           </div>

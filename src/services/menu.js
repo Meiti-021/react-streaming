@@ -22,7 +22,7 @@ export const menu = [
         sidemenu: [],
       },
       {
-        address: "/",
+        address: "/watch",
         title: "Playlist",
         sidemenu: [],
       },

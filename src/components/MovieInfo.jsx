@@ -17,6 +17,7 @@ import {
 } from "../utils/icons";
 import { useDispatch, useSelector } from "react-redux";
 import {
+  addToWatchlist,
   createWatchlist,
   likeMovie,
   setCurrentList,
@@ -97,7 +98,12 @@ const MovieInfo = ({ movie, season, episode }) => {
               className="h-11 w-11 rounded-full p-1 bg-slate-400"
               title="add to watchlist"
             >
-              <button className="w-full rounded-full h-full flex justify-center items-center bg-white text-light-red">
+              <button
+                className="w-full rounded-full h-full flex justify-center items-center bg-white text-light-red"
+                onClick={() => {
+                  dispatch(addToWatchlist(movie.id));
+                }}
+              >
                 <IconPlus />
               </button>
             </div>

@@ -62,7 +62,6 @@ const TopSeries = () => {
                 <Tabs
                   value={value}
                   onChange={handleChange}
-                  textColor="white"
                   sx={{ position: "relative", zIndex: "10" }}
                 >
                   {shows[index].series.map((item) => {
@@ -110,11 +109,11 @@ const TopSeries = () => {
               <div className="bg-white w-10 text-black h-7 font-bold flex justify-center items-center rounded-sm">
                 G
               </div>
-              {shows[index].genres.split(",").map((item) => {
+              {shows[index].genres.split(",").map((item, num) => {
                 return (
                   <div
                     className="flex items-center"
-                    key={item.id + "home-hero-poster"}
+                    key={item + "home-hero-poster" + num}
                   >
                     <p>{item}</p>
                   </div>
@@ -152,9 +151,9 @@ const TopSeries = () => {
                   {shows[index].genres.split(",")[0]}
                 </span>
               </p>
-              <p className=" text-light-red lg:text-sm font-semibold flex items-center whitespace-nowrap">
+              <div className=" text-light-red lg:text-sm font-semibold flex items-center whitespace-nowrap">
                 Casts:{" "}
-                <span className="text-white ml-2 text-sm flex ">
+                <div className="text-white ml-2 text-sm flex ">
                   {shows[index].casts.slice(0, 2).map((item, index) => {
                     return index !== 1 ? (
                       <p key={"movie-starr" + item.id} className="mr-2">
@@ -166,8 +165,8 @@ const TopSeries = () => {
                       </p>
                     );
                   })}
-                </span>
-              </p>
+                </div>
+              </div>
             </div>
             <div className="flex justify-between items-center    mt-12">
               <Link

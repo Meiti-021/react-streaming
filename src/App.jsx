@@ -28,6 +28,7 @@ import BlogInfiniteScroll from "./pages/BlogInfiniteScroll";
 import { SnackbarProvider } from "notistack";
 import Cast from "./pages/Cast";
 import Casts from "./pages/Casts";
+import WatchList from "./pages/WatchList";
 function App() {
   return (
     <div className="font-roboto">
@@ -52,6 +53,7 @@ function App() {
           <Route path="/blog/:id" element={<SingleBlog />} />
           <Route path="/cast/:id" element={<Cast />} />
           <Route path="/cast" element={<Casts />} />
+          <Route path="/watch" element={<WatchList />} />
           <Route path="/movies" element={<Movie />} />
           <Route path="/movies/load-more" element={<Movie2 />} />
           <Route path="/movies/infinite" element={<Movie3 />} />

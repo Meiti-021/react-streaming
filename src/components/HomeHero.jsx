@@ -67,7 +67,7 @@ const HomeHero = () => {
           return (
             <SwiperSlide
               className="w-full h-full flex justify-center  items-center"
-              key={"hero-swiper-bg" + item.id}
+              key={"hero-swiper-bg" + item.id + index}
             >
               {({ isActive }) => (
                 <img
@@ -143,11 +143,11 @@ const HomeHero = () => {
               <div className="bg-white w-10 text-black h-7 font-bold flex justify-center items-center rounded-sm">
                 G
               </div>
-              {movies[index].genres.split(",").map((item) => {
+              {movies[index].genres.split(",").map((item, num) => {
                 return (
                   <div
                     className="flex items-center"
-                    key={item.id + "home-hero-poster"}
+                    key={item + "home-hero-poster" + num}
                   >
                     <p>{item}</p>
                   </div>
@@ -194,11 +194,11 @@ const HomeHero = () => {
                   {movies[index].genres.split(",")[0]}
                 </span>
               </p>
-              <p className=" text-light-red lg:text-sm font-semibold flex items-center whitespace-nowrap">
+              <div className=" text-light-red lg:text-sm font-semibold flex items-center whitespace-nowrap">
                 Casts:{" "}
-                <span className="text-white ml-2 text-sm flex ">
-                  {movies[index].casts.slice(0, 2).map((item, index) => {
-                    return index !== 1 ? (
+                <div className="text-white ml-2 text-sm flex ">
+                  {movies[index].casts.slice(0, 2).map((item, num) => {
+                    return num !== 1 ? (
                       <p key={"movie-starr" + item.id} className="mr-2">
                         {castFinder(item.id).name + ","}
                       </p>
@@ -208,8 +208,8 @@ const HomeHero = () => {
                       </p>
                     );
                   })}
-                </span>
-              </p>
+                </div>
+              </div>
             </div>
             <div
               key={"hero-info-button" + movies[index].id}

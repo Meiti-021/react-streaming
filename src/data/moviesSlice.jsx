@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { movies } from "../services/movies";
 import { shows } from "../services/shows";
+import { enqueueSnackbar } from "notistack";
 const initialState = {
   movies: movies,
   shows: shows,
@@ -62,10 +63,41 @@ const movieSlice = createSlice({
       );
       state.currentPlayList = currenIndex;
     },
+    addToWatchlist: (state, { payload }) => {
+      const isExist = state.watchList[state.currentPlayList].collection.find(
+        (item) => item.id === payload
+      );
+      const movie = [...state.movies, ...state.shows].find(
+        (item) => item.id === payload
+      );
+      if (!isExist) {
+        state.watchList[state.currentPlayList].collection.push(movie);
+        console.log(state.watchList[state.currentPlayList].collection);
+      } else {
+        enqueueSnackbar({
+          variant: "warning",
+          message: "Already Exist in Current Playlist!",
+        });
+      }
+    },
+    removeFromWatchList: (state, { payload }) => {
+      state.watchList[payload.list].collection = state.watchList[
+        payload.list
+      ].collection.filter((item) => item.id !== payload.id);
+      enqueueSnackbar({
+        variant: "success",
+        message: "Item successfuly removed from your list!",
+      });
+    },
   },
 });
 
-export const { likeMovie, setCurrentList, createWatchlist } =
-  movieSlice.actions;
+export const {
+  removeFromWatchList,
+  likeMovie,
+  setCurrentList,
+  createWatchlist,
+  addToWatchlist,
+} = movieSlice.actions;
 
 export default movieSlice.reducer;

@@ -3,11 +3,15 @@ import PropTypes from "prop-types";
 import Lottie from "lottie-react";
 import watch from "../utils/watch.json";
 import { Link } from "react-router-dom";
-const MovieCard2 = ({ timing, title, mainImage, id }) => {
+import { IconUnMark } from "../utils/icons";
+import { useDispatch } from "react-redux";
+import { removeFromWatchList } from "../data/moviesSlice";
+const MovieCard2 = ({ timing, title, mainImage, id, list }) => {
   const [isHover, setIsHover] = useState(false);
+  const dispatch = useDispatch();
   return (
     <article
-      className="relative h-full"
+      className="relative w-full aspect-video"
       onMouseEnter={() => {
         setIsHover(true);
       }}
@@ -44,6 +48,14 @@ const MovieCard2 = ({ timing, title, mainImage, id }) => {
         >
           <Lottie animationData={watch} />
         </Link>
+        <button
+          className="absolute top-5 right-5"
+          onClick={() => {
+            dispatch(removeFromWatchList({ id, list }));
+          }}
+        >
+          <IconUnMark />
+        </button>
       </div>
     </article>
   );
@@ -55,6 +67,7 @@ MovieCard2.propTypes = {
   id: PropTypes.string,
   title: PropTypes.string,
   likes: PropTypes.number,
+  list: PropTypes.number,
 };
 
 export default MovieCard2;
