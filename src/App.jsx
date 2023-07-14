@@ -29,11 +29,14 @@ import { SnackbarProvider } from "notistack";
 import Cast from "./pages/Cast";
 import Casts from "./pages/Casts";
 import WatchList from "./pages/WatchList";
+import LoadingPage from "./components/LoadingPage";
 function App() {
   return (
     <div className="font-roboto">
       <SnackbarProvider />
+
       <BrowserRouter>
+        <LoadingPage />
         <ScrollToTop />
         <Header />
         <Routes>
