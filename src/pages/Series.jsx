@@ -2,7 +2,6 @@ import Wrapper from "../components/Wrapper";
 import { useEffect, useState } from "react";
 import VideoJS from "../components/Videojs";
 import { useLocation, useParams } from "react-router-dom";
-import { shuffle } from "../utils/utils";
 import MovieChart2 from "../components/MovieChart2";
 import MovieInfo from "../components/MovieInfo";
 import MovieCast from "../components/MovieCast";
@@ -101,11 +100,11 @@ const Series = () => {
       </Wrapper>
       <MovieChart2
         title="Related Movies & Shows"
-        list={shuffle([...movies, ...shows]).slice(0, 10)}
+        list={[...movies, ...shows].slice(0, 10)}
       />
       <MovieChart2
         title="Recommended For You"
-        list={shuffle([...movies, ...shows]).slice(0, 10)}
+        list={[...movies, ...shows].slice(0, 10)}
       />
     </>
   );

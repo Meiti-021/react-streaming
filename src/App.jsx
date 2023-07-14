@@ -34,7 +34,6 @@ function App() {
   return (
     <div className="font-roboto">
       <SnackbarProvider />
-
       <BrowserRouter>
         <LoadingPage />
         <ScrollToTop />

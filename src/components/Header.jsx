@@ -15,7 +15,8 @@ import { menu } from "../services/menu";
 const InnerSubmenu = ({ title, address }) => {
   const [isHover, setIsHover] = useState(false);
   return (
-    <li
+    <Link
+      to={address}
       className="relative flex h-10 "
       onMouseEnter={() => {
         setIsHover(true);
@@ -34,10 +35,8 @@ const InnerSubmenu = ({ title, address }) => {
           isHover ? "w-1" : "w-0"
         }`}
       ></span>
-      <p className="relative z-20 text-sm flex items-center px-5">
-        <Link to={address}>{title}</Link>
-      </p>
-    </li>
+      <p className="relative z-20 text-sm flex items-center px-5">{title}</p>
+    </Link>
   );
 };
 
@@ -45,7 +44,8 @@ const Submenu = ({ address, title, sidemenu }) => {
   const [isHover, setIsHover] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
   return (
-    <li
+    <Link
+      to={address}
       className="relative flex h-10 "
       onMouseEnter={() => {
         setIsHover(true);
@@ -67,9 +67,7 @@ const Submenu = ({ address, title, sidemenu }) => {
         }`}
       ></span>
       {sidemenu.length === 0 ? (
-        <p className="relative z-20 text-sm flex items-center px-5">
-          <Link to={address}>{title}</Link>
-        </p>
+        <p className="relative z-20 text-sm flex items-center  px-5">{title}</p>
       ) : (
         <p className="relative z-20 text-sm flex justify-between items-center px-5 w-full">
           {title} <ArrowRight />{" "}
@@ -93,7 +91,7 @@ const Submenu = ({ address, title, sidemenu }) => {
           })}
         </ul>
       ) : undefined}
-    </li>
+    </Link>
   );
 };
 
@@ -252,7 +250,7 @@ const Header = () => {
               <SearchIcon className={"h-5 w-5"} />
             </button>
           </div>
-          <Link to={"/"} aria-label="navigate to account page">
+          <Link to={"/login"} aria-label="navigate to account page">
             <UserIcon className={"h-5 w-5"} />
           </Link>
           <button

@@ -34,7 +34,9 @@ export const shows = [
           {
             id: "mhs1e1",
             timing: "39m 58s",
-            video: "T5cWo",
+            video: "https://film2movie.upera.tv/2786026-0-720.mp4?ref=lKB6",
+            name: "Do as Planned",
+            image: "mh11",
             links: [
               {
                 resolution: "720p",
@@ -51,7 +53,9 @@ export const shows = [
           {
             id: "mhs1e2",
             timing: "50m 35s",
-            video: "ZItab",
+            video: "https://film2movie.upera.tv/2786027-0-720.mp4?ref=lKB6",
+            name: "Lethal Negligence",
+            image: "mh12",
             links: [
               {
                 resolution: "720p",
@@ -68,7 +72,9 @@ export const shows = [
           {
             id: "mhs1e3",
             timing: "51m 17s",
-            video: "6dlGb",
+            video: "https://film2movie.upera.tv/2786028-0-720.mp4?ref=lKB6",
+            name: "Misfire",
+            image: "mh13",
             links: [
               {
                 resolution: "720p",
@@ -85,7 +91,9 @@ export const shows = [
           {
             id: "mhs1e4",
             timing: "43m 17s",
-            video: "2cDSz",
+            video: "https://film2movie.upera.tv/2786029-0-720.mp4?ref=lKB6",
+            name: "Trojan Horse",
+            image: "mh14",
             links: [
               {
                 resolution: "720p",
@@ -102,7 +110,9 @@ export const shows = [
           {
             id: "mhs1e5",
             timing: "41m 56s",
-            video: "Ltual",
+            video: "https://film2movie.upera.tv/2786030-0-720.mp4?ref=lKB6",
+            name: "Groundhog Day",
+            image: "mh15",
             links: [
               {
                 resolution: "720p",
@@ -124,7 +134,10 @@ export const shows = [
           {
             id: "mhs2e1",
             timing: "43m 01s",
-            video: "cOnyN",
+            video:
+              "https://dl200.ftk.pw/?s=19&f=/user/shahab4/serial/Money.Heist/S02/Money.Heist.S02E01.480p.SUBFA.mkv",
+            name: "We're Back",
+            image: "mh21",
             links: [
               {
                 resolution: "720p",
@@ -141,7 +154,10 @@ export const shows = [
           {
             id: "mhs2e2",
             timing: "40m 26s",
-            video: "FjSMG",
+            video:
+              "https://dl200.ftk.pw/?s=19&f=/user/shahab4/serial/Money.Heist/S02/Money.Heist.S02E02.480p.SUBFA.mkv",
+            name: "The Head of the Plan",
+            image: "mh22",
             links: [
               {
                 resolution: "720p",
@@ -158,7 +174,10 @@ export const shows = [
           {
             id: "mhs2e3",
             timing: "51m 15s",
-            video: "znk73",
+            video:
+              "https://dl200.ftk.pw/?s=19&f=/user/shahab4/serial/Money.Heist/S02/Money.Heist.S02E03.720p.SUBFA.mkv",
+            name: "A Matter of Efficiency",
+            image: "mh23",
             links: [
               {
                 resolution: "720p",
@@ -175,7 +194,10 @@ export const shows = [
           {
             id: "mhs2e4",
             timing: "39m 13s",
-            video: "Wgdhf",
+            video:
+              "https://dl200.ftk.pw/?s=19&f=/user/shahab4/serial/Money.Heist/S02/Money.Heist.S02E04.720p.SUBFA.mkv",
+            name: "What Have We Done?",
+            image: "mh24",
             links: [
               {
                 resolution: "720p",
@@ -192,7 +214,10 @@ export const shows = [
           {
             id: "mhs2e5",
             timing: "36m 28s",
-            video: "Li2k3",
+            video:
+              "https://dl200.ftk.pw/?s=19&f=/user/shahab4/serial/Money.Heist/S02/Money.Heist.S02E05.480p.SUBFA.mkv",
+            name: "Against the Clock",
+            image: "mh25",
             links: [
               {
                 resolution: "720p",
@@ -209,7 +234,10 @@ export const shows = [
           {
             id: "mhs2e6",
             timing: "53m 52s",
-            video: "CEN86",
+            video:
+              "https://dl200.ftk.pw/?s=19&f=/user/shahab4/serial/Money.Heist/S02/Money.Heist.S02E06.720p.SUBFA.mkv",
+            name: "Bye Beautiful",
+            image: "mh26",
             links: [
               {
                 resolution: "720p",
@@ -268,7 +296,10 @@ export const shows = [
           {
             id: "tlus1e1",
             timing: "1h 20m",
-            video: "swYOQ",
+            video:
+              "https://dl3.3rver.org/hex4/Serial-Khareji/The.Last.of.Us/S01/Dubbed/The.Last.of.Us.S01E01.720p.Farsi.Dubbed.mkv",
+            name: "When You're Lost in the Darkness",
+            image: "tl11",
             links: [
               {
                 resolution: "720p",
@@ -285,7 +316,10 @@ export const shows = [
           {
             id: "tlus1e2",
             timing: "1h 10m",
-            video: "f75wT",
+            video:
+              "https://dl3.3rver.org/hex4/Serial-Khareji/The.Last.of.Us/S01/Dubbed/The.Last.of.Us.S01E02.720p.Farsi.Dubbed.mkv",
+            name: "Infected",
+            image: "tl12",
             links: [
               {
                 resolution: "720p",
@@ -302,7 +336,10 @@ export const shows = [
           {
             id: "tlus1e3",
             timing: "45m 08",
-            video: "XrIYx",
+            video:
+              "https://dl3.3rver.org/hex4/Serial-Khareji/The.Last.of.Us/S01/Dubbed/The.Last.of.Us.S01E03.720p.Farsi.Dubbed.mkv",
+            name: "Long, Long Time",
+            image: "tl13",
             links: [
               {
                 resolution: "720p",
@@ -319,7 +356,10 @@ export const shows = [
           {
             id: "tlus1e4",
             timing: "58m 58s",
-            video: "ihH0Y",
+            video:
+              "https://dl3.3rver.org/hex4/Serial-Khareji/The.Last.of.Us/S01/Dubbed/The.Last.of.Us.S01E05.720p.Farsi.Dubbed.mkv",
+            name: "Please Hold to My Hand",
+            image: "tl14",
             links: [
               {
                 resolution: "720p",
@@ -336,7 +376,10 @@ export const shows = [
           {
             id: "tlus1e5",
             timing: "52m 43s",
-            video: "pBJ0s",
+            video:
+              "https://dl3.3rver.org/hex4/Serial-Khareji/The.Last.of.Us/S01/Dubbed/The.Last.of.Us.S01E05.720p.Farsi.Dubbed.mkv",
+            name: "Endure and Survive",
+            image: "tl15",
             links: [
               {
                 resolution: "720p",
@@ -399,7 +442,9 @@ export const shows = [
           {
             id: "bbs1e1",
             timing: "49m 41s",
-            video: "F3yZa",
+            video: "https://hexdl.upera.tv/2645266-0-720.mp4?ref=7Qc",
+            name: "Pilot",
+            image: "bb11",
             links: [
               {
                 resolution: "720p",
@@ -416,7 +461,9 @@ export const shows = [
           {
             id: "bbs1e2",
             timing: "45m 18s",
-            video: "3Mzay",
+            video: "https://hexdl.upera.tv/2645268-0-720.mp4?ref=7Qc",
+            name: "Cat's in the Bag...",
+            image: "bb12",
             links: [
               {
                 resolution: "720p",
@@ -433,7 +480,9 @@ export const shows = [
           {
             id: "bbs1e3",
             timing: "46m 25s",
-            video: "nqVgx",
+            video: "https://hexdl.upera.tv/2645269-0-720.mp4?ref=7Qc",
+            name: "...And the Bag's in the River",
+            image: "bb13",
             links: [
               {
                 resolution: "720p",
@@ -450,7 +499,9 @@ export const shows = [
           {
             id: "bbs1e4",
             timing: "47m 18s",
-            video: "ugHsd",
+            video: "https://hexdl.upera.tv/2645270-0-720.mp4?ref=7Qc",
+            name: "Cancer Man",
+            image: "bb14",
             links: [
               {
                 resolution: "720p",
@@ -467,7 +518,9 @@ export const shows = [
           {
             id: "bbs1e5",
             timing: "44m 06s",
-            video: "gj5iJ",
+            video: "https://hexdl.upera.tv/2645271-0-720.mp4?ref=7Qc",
+            name: "Gray Matter",
+            image: "bb15",
             links: [
               {
                 resolution: "720p",
@@ -489,7 +542,9 @@ export const shows = [
           {
             id: "bbs2e1",
             timing: "46m 15s",
-            video: "vdhs6",
+            video: "https://hexdl.upera.tv/2645786-0-720.mp4?ref=7Qc",
+            name: "Seven Thirty-Seven",
+            image: "bb21",
             links: [
               {
                 resolution: "720p",
@@ -506,7 +561,9 @@ export const shows = [
           {
             id: "bbs2e2",
             timing: "44m 37s",
-            video: "g4y8Q",
+            video: "https://hexdl.upera.tv/2645787-0-720.mp4?ref=7Qc",
+            name: "Grilled",
+            image: "bb22",
             links: [
               {
                 resolution: "720p",
@@ -523,7 +580,9 @@ export const shows = [
           {
             id: "bbs2e3",
             timing: "49m 41s",
-            video: "F3yZa",
+            video: "https://hexdl.upera.tv/2645788-0-720.mp4?ref=7Qc",
+            name: "Bit by a Dead Bee",
+            image: "bb23",
             links: [
               {
                 resolution: "720p",
@@ -540,7 +599,9 @@ export const shows = [
           {
             id: "bbs2e4",
             timing: "45m 18s",
-            video: "3Mzay",
+            video: "https://hexdl.upera.tv/2645789-0-720.mp4?ref=7Qc",
+            name: "Down",
+            image: "bb24",
             links: [
               {
                 resolution: "720p",
@@ -557,7 +618,9 @@ export const shows = [
           {
             id: "bbs2e5",
             timing: "46m 25s",
-            video: "nqVgx",
+            video: "https://hexdl.upera.tv/2645790-0-720.mp4?ref=7Qc",
+            name: "Breakage",
+            image: "bb25",
             links: [
               {
                 resolution: "720p",
@@ -624,7 +687,10 @@ export const shows = [
           {
             id: "tb1e1",
             timing: "49 m",
-            video: "nUwcb",
+            video:
+              "https://cdn.irdanlod.ir/?s=2&f=/Series/T/TB/S01/Censored/The.Boys.S01E01.720p.Censored.Farsi.Dubbed.mkv",
+            name: "The Name of the Game",
+            image: "tb11",
             links: [
               {
                 resolution: "720p",
@@ -641,7 +707,10 @@ export const shows = [
           {
             id: "tb1e2",
             timing: "49m 37s",
-            video: "ALxGs",
+            video:
+              "https://cdn.irdanlod.ir/?s=2&f=/Series/T/TB/S01/Censored/The.Boys.S01E02.720p.Censored.Farsi.Dubbed.mkv",
+            name: "Cherry",
+            image: "tb12",
             links: [
               {
                 resolution: "720p",
@@ -658,7 +727,10 @@ export const shows = [
           {
             id: "tb1e3",
             timing: "49m 39s",
-            video: "3INdb",
+            video:
+              "https://cdn.irdanlod.ir/?s=2&f=/Series/T/TB/S01/Censored/The.Boys.S01E03.720p.Censored.Farsi.Dubbed.mkv",
+            name: "Get Some",
+            image: "tb13",
             links: [
               {
                 resolution: "720p",
@@ -675,7 +747,10 @@ export const shows = [
           {
             id: "tb1e4",
             timing: "49m 39s",
-            video: "wYRoj",
+            video:
+              "https://cdn.irdanlod.ir/?s=2&f=/Series/T/TB/S01/Censored/The.Boys.S01E04.720p.Censored.Farsi.Dubbed.mkv",
+            name: "The Female of the Species",
+            image: "tb14",
             links: [
               {
                 resolution: "720p",
@@ -692,7 +767,10 @@ export const shows = [
           {
             id: "tb1e5",
             timing: "49m 37s",
-            video: "elUMs",
+            video:
+              "https://cdn.irdanlod.ir/?s=2&f=/Series/T/TB/S01/Censored/The.Boys.S01E05.720p.Censored.Farsi.Dubbed.mkv",
+            name: "Good for the Soul",
+            image: "tb15",
             links: [
               {
                 resolution: "720p",
@@ -714,7 +792,10 @@ export const shows = [
           {
             id: "tb2e1",
             timing: "49m 39s",
-            video: "ge2dC",
+            video:
+              "https://cdn.irdanlod.ir/?s=2&f=/Series/T/TB/S02/The.Boys.S02E01.720p.Farsi.Dubbed.mkv",
+            name: "The Big Ride",
+            image: "tb21",
             links: [
               {
                 resolution: "720p",
@@ -731,7 +812,10 @@ export const shows = [
           {
             id: "tb2e2",
             timing: "48m 38s",
-            video: "tlPwM",
+            video:
+              "https://cdn.irdanlod.ir/?s=2&f=/Series/T/TB/S02/The.Boys.S02E02.720p.Farsi.Dubbed.mkv",
+            name: "Proper Preparation and Planning",
+            image: "tb22",
             links: [
               {
                 resolution: "720p",
@@ -748,7 +832,10 @@ export const shows = [
           {
             id: "tb2e3",
             timing: "48m 50s",
-            video: "5oDP0",
+            video:
+              "https://cdn.irdanlod.ir/?s=2&f=/Series/T/TB/S02/The.Boys.S02E03.720p.Farsi.Dubbed.mkv",
+            name: "Over the Hill",
+            image: "tb23",
             links: [
               {
                 resolution: "720p",
@@ -765,7 +852,10 @@ export const shows = [
           {
             id: "tb2e4",
             timing: "49m 39s",
-            video: "x8np7",
+            video:
+              "https://cdn.irdanlod.ir/?s=2&f=/Series/T/TB/S02/The.Boys.S02E04.720p.Farsi.Dubbed.mkv",
+            name: "Nothing Like It in the World",
+            image: "tb24",
             links: [
               {
                 resolution: "720p",
@@ -782,7 +872,10 @@ export const shows = [
           {
             id: "tb2e5",
             timing: "49m 39s",
-            video: "PQtvi",
+            video:
+              "https://cdn.irdanlod.ir/?s=2&f=/Series/T/TB/S02/The.Boys.S02E05.720p.Farsi.Dubbed.mkv",
+            name: "We Gotta Go Now",
+            image: "tb25",
             links: [
               {
                 resolution: "720p",

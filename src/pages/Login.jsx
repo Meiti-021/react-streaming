@@ -4,7 +4,9 @@ const Login = () => {
   return (
     <div className="fixed p-5 bg-center top-0 w-full h-screen flex justify-center items-center bg-[url(/assets/others/banner.webp)] z-50">
       <form
-        action="#"
+        onSubmit={(e) => {
+          e.preventDefault();
+        }}
         className="w-full flex flex-col gap-5 max-w-lg bg-[rgba(0,0,0,0.8)] backdrop-blur-sm px-9 py-20"
       >
         <img src={logo} alt="" className="w-44 mx-auto" />

@@ -68,7 +68,11 @@ const TopSeries = () => {
                     return (
                       <Tab
                         label={item.title}
-                        sx={{ fontFamily: "roboto", paddingBottom: "15px" }}
+                        sx={{
+                          fontFamily: "roboto",
+                          paddingBottom: "15px",
+                          color: "white",
+                        }}
                         key={item.episodes[0].id + "tabs"}
                       />
                     );
@@ -79,23 +83,20 @@ const TopSeries = () => {
               <div className="relative flex flex-col  gap-4 items-center w-full p-7 pb-0  ">
                 {shows[index].series[value].episodes
                   .slice(0, 5)
-                  .map((episode, epIndex) => {
+                  .map((episode) => {
                     return (
-                      <Link className="flex h-20 gap-4 w-full" key={episode.id}>
+                      <Link
+                        to={`/series/${shows[index].id}`}
+                        className="flex h-20 gap-4 w-full"
+                        key={episode.id}
+                      >
                         <img
-                          src={`/assets/collections/${shows[index].thumbImage}`}
+                          src={`/assets/collections/${episode.image}.jpg`}
                           alt=""
                           className="block w-36 h-full object-cover object-top"
                         />
                         <div className="flex flex-col gap-2 justify-center">
-                          <p>
-                            {"season" +
-                              " " +
-                              (value + 1) +
-                              " " +
-                              " episode " +
-                              (epIndex + 1)}
-                          </p>
+                          <p>{episode.name}</p>
                           <p className="text-sm text-gray">{episode.timing}</p>
                         </div>
                       </Link>
@@ -170,7 +171,7 @@ const TopSeries = () => {
             </div>
             <div className="flex justify-between items-center    mt-12">
               <Link
-                to={"/"}
+                to={`/series/${shows[index].id}`}
                 className="flex justify-center items-center w-40 gap-1 p-3  px-8 font-bold text-sm rounded-sm bg-light-red"
               >
                 STREAM NOW

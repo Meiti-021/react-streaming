@@ -102,7 +102,7 @@ const ShowSource = ({ movie, season, setEpisode, episode }) => {
             {movie.series[season].episodes.map((item, index) => {
               return (
                 <button
-                  className={`flex h-24 gap-4 w-full max-w-sm `}
+                  className={`flex  h-24 gap-4 w-full max-w-md items-center`}
                   key={item.video}
                   onClick={() => {
                     setEpisode(index);
@@ -110,18 +110,19 @@ const ShowSource = ({ movie, season, setEpisode, episode }) => {
                   }}
                 >
                   <img
-                    src={`/assets/collections/${movie.thumbImage}`}
+                    src={`/assets/collections/${item.image}.jpg`}
                     alt=""
                     className="block w-36 h-full object-cover object-top"
                   />
-                  <div className="flex flex-col gap-2 justify-center">
-                    <p
-                      className={`${
+                  <div className="flex w-full flex-col gap-2 justify-center">
+                    <div
+                      className={`flex justify-between w-full ${
                         episode === index ? "text-light-red" : undefined
                       }`}
                     >
-                      {`Season ${season + 1} Episode ${index + 1}`}
-                    </p>
+                      <p>{item.name}</p>
+                      <p> {`S0${season + 1}E0${index + 1}`}</p>
+                    </div>
                     <p className="text-sm text-gray  text-left">
                       {item.timing}
                     </p>

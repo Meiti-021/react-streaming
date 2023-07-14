@@ -1,24 +1,25 @@
 export const menu = [
   {
     title: "Home",
+    address: "/",
     submenu: [],
   },
   {
     title: "Features",
     submenu: [
       {
-        address: "/",
+        address: "/movies/johnwick",
         title: "Download Movie",
         sidemenu: [],
       },
       {
-        address: "/",
+        address: "/movies/covenant",
         title: "Restricted Content",
         sidemenu: [],
       },
       {
-        address: "/",
-        title: "Related Merchandise",
+        address: "/series/thelastofus",
+        title: "Watch Tv Shows",
         sidemenu: [],
       },
       {
@@ -27,8 +28,13 @@ export const menu = [
         sidemenu: [],
       },
       {
-        address: "/",
-        title: "Cast",
+        address: "/cast",
+        title: "Casts",
+        sidemenu: [],
+      },
+      {
+        address: "/cast/jakegyllenhaal",
+        title: "Single Cast",
         sidemenu: [],
       },
     ],
@@ -37,62 +43,49 @@ export const menu = [
     title: "Pages",
     submenu: [
       {
-        address: "/",
+        address: "/about",
         title: "About US",
         sidemenu: [],
       },
       {
-        address: "/",
+        address: "/contact",
         title: "Contact US",
         sidemenu: [],
       },
       {
-        address: "/",
+        address: "/contact2",
         title: "Contact US 2",
         sidemenu: [],
       },
       {
-        address: "/",
+        address: "/faqs",
         title: "FAQ",
         sidemenu: [],
       },
       {
-        address: "/",
+        address: "/privacy-policy",
         title: "Privacy and policy",
         sidemenu: [],
       },
       {
-        address: "/",
+        address: "/pmp-pricing-plan",
         title: "Pricing",
-        sidemenu: [
-          {
-            address: "/",
-            title: "plan 1",
-          },
-          {
-            address: "/",
-            title: "plan 2",
-          },
-          {
-            address: "/",
-            title: "plan 3",
-          },
-        ],
+        sidemenu: [],
       },
       {
-        address: "/",
+        address: "/movies",
         title: "Pagination Style",
         sidemenu: [
           {
-            address: "/",
+            address: "/movies",
             title: "Pagination",
           },
           {
-            address: "/",
+            address: "/movies/load-more",
             title: "Load more",
           },
           {
-            address: "/",
+            address: "/movies/infinite",
             title: "Infinite scroll",
           },
         ],
@@ -102,11 +95,11 @@ export const menu = [
         title: "Error Page",
         sidemenu: [
           {
-            address: "/",
+            address: "/somewheredoesntexist",
             title: "Error 1",
           },
           {
-            address: "/",
+            address: "/error2",
             title: "Error 2",
           },
         ],
@@ -117,7 +110,7 @@ export const menu = [
     title: "Blog",
     submenu: [
       {
-        address: "/",
+        address: "/blog",
         title: "Listing",
         sidemenu: [],
       },
@@ -126,20 +119,16 @@ export const menu = [
         title: "Blog Grid",
         sidemenu: [
           {
-            address: "/",
+            address: "/blog-grid/column-1",
             title: "1 column",
           },
           {
-            address: "/",
+            address: "/blog-grid/column-2",
             title: "2 column",
           },
           {
-            address: "/",
+            address: "/blog-grid/column-3",
             title: "3 column",
-          },
-          {
-            address: "/",
-            title: "4 column",
           },
         ],
       },
@@ -148,11 +137,11 @@ export const menu = [
         title: "Blog Sidebar",
         sidemenu: [
           {
-            address: "/",
+            address: "/blog-left-sidebar",
             title: "Left Sidebar",
           },
           {
-            address: "/",
+            address: "/blog",
             title: "Right Sidebar",
           },
         ],
@@ -162,31 +151,27 @@ export const menu = [
         title: "Blog",
         sidemenu: [
           {
-            address: "/",
-            title: "Blog Template",
-          },
-          {
-            address: "/",
+            address: "/blog/blog-1",
             title: "Standard",
           },
           {
-            address: "/",
+            address: "/blog/blog-3",
             title: "Audio",
           },
           {
-            address: "/",
+            address: "/blog/blog-4",
             title: "Video",
           },
           {
-            address: "/",
+            address: "/blog/blog-2",
             title: "Link",
           },
           {
-            address: "/",
+            address: "/blog/blog-5",
             title: "Quote",
           },
           {
-            address: "/",
+            address: "/blog/blog-6",
             title: "Gallery",
           },
         ],
@@ -196,48 +181,18 @@ export const menu = [
         title: "Pagination style",
         sidemenu: [
           {
-            address: "/",
+            address: "/blog-pagination",
             title: "Pagination",
           },
           {
-            address: "/",
+            address: "/blog-load-more",
             title: "Load More",
           },
           {
-            address: "/",
+            address: "/blog-infinite-scroll",
             title: "Infinite scroll",
           },
         ],
-      },
-    ],
-  },
-  {
-    title: "Shop",
-    submenu: [
-      {
-        address: "/",
-        title: "Account",
-        sidemenu: [],
-      },
-      {
-        address: "/",
-        title: "Cart",
-        sidemenu: [],
-      },
-      {
-        address: "/",
-        title: "wishlist",
-        sidemenu: [],
-      },
-      {
-        address: "/",
-        title: "CheckOut",
-        sidemenu: [],
-      },
-      {
-        address: "/",
-        title: "Order Tracking",
-        sidemenu: [],
       },
     ],
   },

@@ -43,10 +43,12 @@ const FaqItem = ({ item }) => {
 const FAQ = () => {
   return (
     <Page title="FAQS">
-      <div className="grid gap-5 max-w-4xl mx-auto">
-        {faqs.map((item) => {
-          return <FaqItem item={item} key={item} />;
-        })}
+      <div className="min-h-screen">
+        <div className="grid gap-5 max-w-4xl mx-auto ">
+          {faqs.map((item) => {
+            return <FaqItem item={item} key={item} />;
+          })}
+        </div>
       </div>
     </Page>
   );
