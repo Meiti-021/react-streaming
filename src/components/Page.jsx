@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 const Page = ({ children, title, className }) => {
   return (
     <div className={className}>
@@ -16,4 +17,9 @@ const Page = ({ children, title, className }) => {
   );
 };
 
+Page.propTypes = {
+  children: PropTypes.node,
+  title: PropTypes.string,
+  className: PropTypes.string,
+};
 export default Page;

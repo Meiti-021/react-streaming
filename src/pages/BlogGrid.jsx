@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import BlogCard2 from "../components/BlogCard2";
 import Page from "../components/Page";
 import { blogs } from "../services/blog";

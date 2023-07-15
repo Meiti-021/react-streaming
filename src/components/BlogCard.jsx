@@ -7,16 +7,7 @@ import {
   UserIcon,
 } from "../utils/icons";
 import { Link } from "react-router-dom";
-const BlogCard = ({
-  id,
-  date,
-  author,
-  categories,
-  tags,
-  title,
-  subtitle,
-  index,
-}) => {
+const BlogCard = ({ id, date, author, categories, tags, title, subtitle }) => {
   return (
     <div className="relative flex flex-col gap-6 py-10">
       <img

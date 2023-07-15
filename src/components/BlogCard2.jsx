@@ -1,13 +1,6 @@
 import PropTypes from "prop-types";
-import {
-  ArrowRight,
-  IconCalender,
-  IconFilm,
-  IconTag,
-  UserIcon,
-} from "../utils/icons";
 import { Link } from "react-router-dom";
-const BlogCard2 = ({ id, date, author, categories, tags, title, subtitle }) => {
+const BlogCard2 = ({ id, title, subtitle }) => {
   return (
     <div className="relative flex flex-col gap-3 py-10">
       <img

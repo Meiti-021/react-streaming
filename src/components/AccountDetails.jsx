@@ -42,6 +42,7 @@ const month = [
   { label: "November" },
   { label: "December" },
 ];
+import PropTypes from "prop-types";
 const AccountDetails = ({ myPlan }) => {
   return (
     <form className="h-full mt-10 w-full flex flex-col 2xl:items-start 2xl:flex-row 2xl:gap-10 justify-center items-center">
@@ -332,4 +333,7 @@ const AccountDetails = ({ myPlan }) => {
   );
 };
 
+AccountDetails.propTypes = {
+  myPlan: PropTypes.string,
+};
 export default AccountDetails;

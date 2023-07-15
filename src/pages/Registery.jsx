@@ -94,7 +94,7 @@ const Registery = () => {
           alternativeLabel
           sx={{ maxWidth: "1000px", margin: "20px auto" }}
         >
-          {steps.map((label, index) => {
+          {steps.map((label) => {
             return (
               <Step
                 key={label}
@@ -132,7 +132,7 @@ const Registery = () => {
                   {...item}
                   handleNext={handleNext}
                   setMyplan={setMyplan}
-                  key={item.type}
+                  key={item.type + index}
                 />
               );
             })}

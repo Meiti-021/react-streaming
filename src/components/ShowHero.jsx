@@ -14,17 +14,12 @@ const ShowHero = () => {
   const bigSwiper = useRef(null);
   const smallSwiper = useRef(null);
   const nextBtn = useRef(null);
-  // useEffect(() => {
-  //   setInterval(() => {
-  //     nextSlide();
-  //   }, 7000);
-  // }, []);
   useEffect(() => {
     anime({
       targets: ".animated",
       translateX: -160,
 
-      delay: function (el, i, l) {
+      delay: function (el, i) {
         return i * 100;
       },
       endDelay: function (el, i, l) {
@@ -37,7 +32,7 @@ const ShowHero = () => {
     anime({
       targets: ".faded",
       opacity: [0, 1],
-      delay: function (el, i, l) {
+      delay: function (el, i) {
         return i * 100;
       },
       endDelay: function (el, i, l) {

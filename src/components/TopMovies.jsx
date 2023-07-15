@@ -33,14 +33,17 @@ const TopMovies = () => {
                   className="relative h-96 rounded-sm"
                   key={"top10-swiper-sm" + item.id}
                 >
-                  <Link className="relative  w-full h-full block ">
+                  <Link
+                    to={`/movies/${item.id}`}
+                    className="relative  w-full h-full block "
+                  >
                     <img
                       src={`/assets/collections/${item.mainImage}`}
                       alt=""
                       className=" block w-full h-full object-cover"
                     />
                   </Link>
-                  <p className="absolute text-[7rem] font-extrabold text-transparent bg-clip-text bg-[url(/assets/others/bg.webp)] right-0 left-0 mx-auto -bottom-20">
+                  <p className="absolute text-[7rem] z-20 font-extrabold text-transparent bg-clip-text bg-[url(/assets/others/bg.webp)] right-0 left-0 mx-auto -bottom-20">
                     {index + 1}
                   </p>
                 </SwiperSlide>

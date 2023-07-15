@@ -3,6 +3,7 @@ import { LinearProgress } from "@mui/material";
 import { useState } from "react";
 import { IconNext, IconPause, IconPlay, IconPrev } from "../utils/icons";
 import { fancyTimeFormat } from "../utils/utils";
+import PropTypes from "prop-types";
 const Audio = ({ src, title, name, image }) => {
   const media = useRef(null);
   const [time, setTime] = useState(0);
@@ -74,6 +75,14 @@ const Audio = ({ src, title, name, image }) => {
       </div>
     </>
   );
+};
+
+Audio.propTypes = {
+  myPlan: PropTypes.string,
+  src: PropTypes.string,
+  title: PropTypes.string,
+  name: PropTypes.string,
+  image: PropTypes.string,
 };
 
 export default Audio;

@@ -25,7 +25,7 @@ export const movies = [
     trailer:
       "https://ia804709.us.archive.org/15/items/John-Wick-Chapter-4-Official-Trailer-ProRes/JW4_OfficialTrailer_prores.mp4",
     video:
-      "https://t.tarahipro.ir/1402/02/30/John.Wick.Chapter.4.2023.1080p.WEB-DL.ZF.mkv",
+      "https://cdn.irdanlod.ir/?s=8&f=/files/Movie/2023/J/John.Wick.Chapter.4.2023.720p.Farsi.Subbed.v2.mkv",
     reviews: "",
     links: [
       {
@@ -121,7 +121,7 @@ export const movies = [
     timing: "1h 32m",
     trailer: "https://archive.org/download/youtube-TnGl01FkMMo/TnGl01FkMMo.mp4",
     video:
-      "https://cdn.irdanlod.ir/?s=2&f=/Animation/2023/T/The.Super.Mario.Bros.Movie.2023.1080p.WEB-DL.6CH.mkv",
+      "https://cdn.irdanlod.ir/?s=2&f=/Animation/2023/T/The.Super.Mario.Bros.Movie.2023.720p.WEB-DL.2CH.mkv",
     reviews: "",
     links: [
       {
@@ -176,7 +176,7 @@ export const movies = [
     trailer:
       "https://archive.org/download/interstellar-official-trailer-4K-prores/Interstellar_OfficialTrailer_4K_51_prores.mp4",
     video:
-      "https://cdn.irdanlod.ir/?s=4&f=/files/Movie/2014/I/Interstellar.2014.1080p.Farsi.Dubbed.mkv",
+      "https://cdn.irdanlod.ir/?s=4&f=/files/Movie/2014/I/Interstellar.2014.720p.Farsi.Dubbed.mkv",
     reviews: "",
     links: [
       {

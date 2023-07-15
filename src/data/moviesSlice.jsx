@@ -47,7 +47,10 @@ const movieSlice = createSlice({
     createWatchlist: (state, { payload }) => {
       const isExist = state.watchList.find((item) => item.name === payload);
       if (isExist) {
-        //
+        enqueueSnackbar({
+          variant: "error",
+          message: "Playlist is already exist!",
+        });
       } else {
         state.currentPlayList = state.watchList.length;
         state.watchList.push({
@@ -72,7 +75,10 @@ const movieSlice = createSlice({
       );
       if (!isExist) {
         state.watchList[state.currentPlayList].collection.push(movie);
-        console.log(state.watchList[state.currentPlayList].collection);
+        enqueueSnackbar({
+          variant: "success",
+          message: "Succesfully added to current playlist!",
+        });
       } else {
         enqueueSnackbar({
           variant: "warning",

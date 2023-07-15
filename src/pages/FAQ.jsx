@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Page from "../components/Page";
 import { IconPlus, MinusIcon } from "../utils/icons";
+import PropTypes from "prop-types";
 const faqs = [
   "What is streamit?",
   "Will my account work outside my country?",
@@ -54,4 +55,9 @@ const FAQ = () => {
   );
 };
 
+FaqItem.propTypes = {
+  item: PropTypes.string,
+};
+
+// eslint-disable-next-line react-refresh/only-export-components
 export default FAQ;

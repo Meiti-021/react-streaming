@@ -1,4 +1,5 @@
 import { Rating } from "@mui/material";
+import PropTypes from "prop-types";
 const Comment = ({ user, rate, comment, date }) => {
   return (
     <div className="flex gap-8 ">
@@ -31,6 +32,13 @@ const Comment = ({ user, rate, comment, date }) => {
       </div>
     </div>
   );
+};
+
+Comment.propTypes = {
+  user: PropTypes.object,
+  rate: PropTypes.number,
+  comment: PropTypes.string,
+  date: PropTypes.string,
 };
 
 export default Comment;

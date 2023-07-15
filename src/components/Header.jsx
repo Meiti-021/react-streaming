@@ -260,15 +260,20 @@ const Header = () => {
             />
             <Link
               to={`/blog/search/${search}`}
-              onClick={() => {
+              onMouseEnter={() => {
                 setSearchOpen(!searchOpen);
               }}
               aria-label="open search input"
+              className="flex justify-center items-center"
             >
               <SearchIcon className={"h-5 w-5"} />
             </Link>
           </div>
-          <Link to={"/login"} aria-label="navigate to account page">
+          <Link
+            to={"/login"}
+            aria-label="navigate to account page"
+            className="flex justify-center items-center h-full"
+          >
             <UserIcon className={"h-5 w-5"} />
           </Link>
           <button

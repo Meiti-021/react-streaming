@@ -21,7 +21,7 @@ const Contact1 = () => {
   return (
     <Page title="Contact">
       <div className="py-20 grid sm:grid-cols-3 gap-10 sm:gap-5 relative">
-        {info.map((item, index) => {
+        {info.map((item) => {
           return (
             <div
               className="flex flex-col justify-center items-center gap-1"
