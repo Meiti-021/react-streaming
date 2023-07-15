@@ -34,7 +34,7 @@ import MovieSearch from "./pages/MovieSearch";
 import BlogSearch from "./pages/BlogSearch";
 function App() {
   return (
-    <div className="font-roboto">
+    <div className="font-roboto relative">
       <SnackbarProvider />
       <BrowserRouter>
         <LoadingPage />
