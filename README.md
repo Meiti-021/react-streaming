@@ -6,6 +6,8 @@ Welcome to the Streaming Website project! This is a frontend demo of a streaming
 
 Please note that this project is a frontend demo and does not include a real backend or server-side functionality. It is meant to demonstrate the user interface and frontend implementation of a streaming website.
 
+- To view the live demo of this website, [click here](https://meitiflix.netlify.app/).
+
 ## Features
 
 - Playlist management: Create, edit, and delete playlists to organize your favorite videos.
