@@ -4,12 +4,12 @@
 
 @layer base {
   html {
-    @apply font-roboto w-screen overflow-x-hidden;
+    @apply font-roboto w-screen overflow-x-hidden text-sm  xs:text-base;
   }
   body::-webkit-scrollbar {
     @apply hidden;
   }
   body {
-    @apply bg-darker-gray text-white font-roboto;
+    @apply bg-darker-gray text-white font-roboto w-full overflow-x-hidden;
   }
 }

@@ -22,8 +22,8 @@ export const movies = [
     ],
     imdbRate: "8.5",
     timing: "1h : 41m",
-    thriller:
-      "https://digimovie.vip/wp-content/uploads/2023/02/John-Wick-Chapter-4-Final-Trailer.mp4",
+    trailer:
+      "https://ia804709.us.archive.org/15/items/John-Wick-Chapter-4-Official-Trailer-ProRes/JW4_OfficialTrailer_prores.mp4",
     video:
       "https://t.tarahipro.ir/1402/02/30/John.Wick.Chapter.4.2023.1080p.WEB-DL.ZF.mkv",
     reviews: "",
@@ -46,7 +46,7 @@ export const movies = [
     ],
     premium: false,
     description:
-      "An ex-hitman seeks vengeance against the mobsters who killed his dog and stole his car.John Wick is an American neo-noir action thriller media franchise created by Derek Kolstad and centered on John Wick, a former hitman who is forced back into the criminal underworld he had previously abandoned. ",
+      "An ex-hitman seeks vengeance against the mobsters who killed his dog and stole his car.John Wick is an American neo-noir action trailer media franchise created by Derek Kolstad and centered on John Wick, a former hitman who is forced back into the criminal underworld he had previously abandoned. ",
     likes: 985,
     liked: false,
   },
@@ -69,7 +69,7 @@ export const movies = [
     ],
     imdbRate: "7.5",
     timing: "2h 10m",
-    thriller:
+    trailer:
       "https://digimovie.vip/wp-content/uploads/2023/02/THE_COVENANT_Official_Trailer-1.mp4",
     video:
       "https://cdn2.uptv.ir/?s=11&f=film2/2023/The_Covenant_2023_720p_UPTV.co_Sub.mkv?1687615288",
@@ -119,8 +119,7 @@ export const movies = [
     ],
     imdbRate: "7.1",
     timing: "1h 32m",
-    thriller:
-      "https://archive.org/download/youtube-TnGl01FkMMo/TnGl01FkMMo.mp4",
+    trailer: "https://archive.org/download/youtube-TnGl01FkMMo/TnGl01FkMMo.mp4",
     video:
       "https://cdn.irdanlod.ir/?s=2&f=/Animation/2023/T/The.Super.Mario.Bros.Movie.2023.1080p.WEB-DL.6CH.mkv",
     reviews: "",
@@ -174,7 +173,7 @@ export const movies = [
     ],
     imdbRate: "8.7",
     timing: "2h 49m",
-    thriller:
+    trailer:
       "https://archive.org/download/interstellar-official-trailer-4K-prores/Interstellar_OfficialTrailer_4K_51_prores.mp4",
     video:
       "https://cdn.irdanlod.ir/?s=4&f=/files/Movie/2014/I/Interstellar.2014.1080p.Farsi.Dubbed.mkv",
@@ -229,7 +228,7 @@ export const movies = [
     ],
     imdbRate: "8.8",
     timing: "2h 28m",
-    thriller:
+    trailer:
       "https://archive.org/download/INCEPTIONTrailer_201810/INCEPTION%20trailer.mp4",
     video:
       "https://cdn.irdanlod.ir/?s=2&f=/Movies/2010/I/Inception.2010.1080p.Farsi.Dubbed.mkv",
@@ -271,7 +270,7 @@ export const movies = [
     ],
     imdbRate: "8.4",
     timing: "2h 2m",
-    thriller:
+    trailer:
       "https://archive.org/download/JOKERTeaserTrailer720X1280/JOKER%20-%20Teaser%20Trailer%20%28%20720%20X%201280%20%29.mp4",
     video:
       "https://cdn.irdanlod.ir/?s=1&f=/files/Movie/2019/J/Joker.2019.480p.Censored.Farsi.Dubbed.mkv",
@@ -317,7 +316,7 @@ export const movies = [
     ],
     imdbRate: "7.9",
     timing: "1h 42m",
-    thriller:
+    trailer:
       "https://archive.org/download/coitx-Feature_Flix_-_Puss_in_Boots_-_The_Last_Wish/Feature_Flix_-_Puss_in_Boots_-_The_Last_Wish.HD.mov",
     video:
       "https://archive.org/download/puss.-in.-boots.-the.-last.-wish.-2022.2160p.-4k/Puss.In.Boots.The.Last.Wish.2022.2160p.4K.WEB.x265.10bit.AAC5.1-%5BYTS.MX%5D.mp4",
@@ -368,7 +367,7 @@ export const movies = [
     ],
     imdbRate: "5.4",
     timing: "2h 28m",
-    thriller:
+    trailer:
       "https://archive.org/download/matrixmovietrailer/matrixtrailer_512kb.mp4",
     video:
       "https://archive.org/download/Popcornarchive-theMatrix1999_ice00/Popcornarchive-theMatrix1999_ice00.mp4",

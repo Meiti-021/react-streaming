@@ -63,7 +63,7 @@ const TopGenres = () => {
           })}
         </Swiper>
         <button
-          className="absolute top-0 bottom-0 text-light-red -left-16 my-auto z-20 "
+          className="absolute top-0 bottom-0 text-light-red sm:-left-16 -left-11 my-auto z-20 "
           onClick={() => {
             swiperRef.current.swiper.slidePrev();
           }}
@@ -71,7 +71,7 @@ const TopGenres = () => {
           <ArrowLeft className="h-20 w-20" />
         </button>
         <button
-          className="absolute top-0 bottom-0  text-light-red  -right-16 my-auto z-20 "
+          className="absolute top-0 bottom-0  text-light-red  sm:-right-16 -right-11 my-auto z-20 "
           onClick={() => {
             swiperRef.current.swiper.slideNext();
           }}

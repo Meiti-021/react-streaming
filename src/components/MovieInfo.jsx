@@ -34,7 +34,7 @@ const MovieInfo = ({ movie, season, episode }) => {
   const [playlistOpen, setPlaylistOpen] = useState(false);
   return (
     <div className="flex lg:flex-row flex-col h-auto gap-10 justify-between my-7">
-      <div className="flex flex-col gap-10 xs:h-72 justify-between ">
+      <div className="flex flex-col gap-4 sm:gap-10 xs:h-72 justify-between ">
         <div className="flex items-start flex-wrap flex-col xs:flex-row xs:items-center gap-3">
           <h1 className="text-4xl font-bold uppercase text-transparent bg-clip-text bg-[url(/assets/others/bg.webp)]">
             {movie.title}{" "}
@@ -206,7 +206,12 @@ const MovieInfo = ({ movie, season, episode }) => {
           <p className="h-full flex items-center">{movie.genres}</p>
         </p>
       </div>
-      <div className=" lg:max-w-[35rem] w-full aspect-video h-auto max-h-[18rem] relative rounded-lg">
+      <a
+        target="_blank"
+        href={movie.trailer}
+        rel="noreferrer"
+        className=" lg:max-w-[35rem] w-full aspect-video h-auto max-h-[18rem] relative rounded-lg"
+      >
         <img
           src={`/assets/collections/${movie.mainImage}`}
           alt=""
@@ -214,9 +219,11 @@ const MovieInfo = ({ movie, season, episode }) => {
         />
         <div className="absolute top-0 z-10 w-full h-full justify-center items-center flex flex-col  bg-[rgba(0,0,0,0.3)]">
           <Lottie animationData={play} className="h-48" />
-          <p className="text-lg uppercase -mt-14">watch trailer</p>
+          <p className="text-lg relative z-20 uppercase -mt-14">
+            watch trailer
+          </p>
         </div>
-      </div>
+      </a>
     </div>
   );
 };

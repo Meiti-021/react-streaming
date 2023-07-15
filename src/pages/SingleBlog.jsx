@@ -26,6 +26,7 @@ const SingleBlog = () => {
   const [data, setData] = useState(null);
   const [blog, setBlog] = useState(null);
   const [review, setReview] = useState(false);
+  const [search, setSearch] = useState("");
   const [form, setForm] = useState({
     id: "",
     name: "",
@@ -38,6 +39,7 @@ const SingleBlog = () => {
     const myData = blogs.find((item) => item.id === id);
     const myStoreData = blogsData.find((item) => item.id === id);
     const myDataIndex = blogs.findIndex((item) => item.id === id);
+
     if (myData) {
       setData(myStoreData);
       setBlog(myData);
@@ -60,6 +62,7 @@ const SingleBlog = () => {
       inputRef.current.focus();
     }
   }, [review]);
+
   if (blog === null) {
     return <>oh Sorry</>;
   }
@@ -233,10 +236,17 @@ const SingleBlog = () => {
               type="text"
               className="w-full h-full p-3 focus:outline-none  bg-black"
               placeholder="search"
+              value={search}
+              onChange={(e) => {
+                setSearch(e.target.value);
+              }}
             />
-            <button className="w-16 h-full flex justify-center items-center bg-light-red">
+            <Link
+              to={`/blog/search/${form}`}
+              className="w-16 h-full flex justify-center items-center bg-light-red"
+            >
               <SearchIcon className={"w-5 h-5"} />
-            </button>
+            </Link>
           </div>
 
           <div className="p-10 flex  flex-col  bg-gradient-to-b from-dark-gray to-black">
@@ -244,7 +254,8 @@ const SingleBlog = () => {
             <div className="flex flex-col gap-8 mt-10">
               {blogs.slice(0, 3).map((item) => {
                 return (
-                  <div
+                  <Link
+                    to={`/blog/${item.id}`}
                     className="flex items-center gap-5"
                     key={item.id + "blog-sidebar"}
                   >
@@ -262,7 +273,7 @@ const SingleBlog = () => {
                         {item.date}
                       </p>
                     </div>
-                  </div>
+                  </Link>
                 );
               })}
             </div>
@@ -274,7 +285,7 @@ const SingleBlog = () => {
               {blogs[0].tags.split(",").map((item, index) => {
                 return (
                   <Link
-                    to="#"
+                    to={`/blog/search/${item}`}
                     className="capitalize py-4 text-gray border-b-1 border-[rgba(255,255,255,0.1)] hover:pl-1  transition-all duration-300 "
                     key={item.id + "blog-sidebar-categories" + index}
                   >
@@ -290,7 +301,7 @@ const SingleBlog = () => {
               {blogs[0].tags.split(",").map((item, index) => {
                 return (
                   <Link
-                    to="#"
+                    to={`/blog/search/${item}`}
                     className="w-auto px-5 capitalize rounded-sm py-2 text-gray text-sm  bg-[rgba(255,255,255,0.1)]"
                     key={item.id + "blog-sidebar-categories" + index}
                   >

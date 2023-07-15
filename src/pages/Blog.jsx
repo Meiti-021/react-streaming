@@ -1,3 +1,4 @@
+import { useState } from "react";
 import BlogCard from "../components/BlogCard";
 import Page from "../components/Page";
 import { blogs } from "../services/blog";
@@ -10,6 +11,7 @@ import {
 } from "../utils/icons";
 import { Link } from "react-router-dom";
 const Blog = () => {
+  const [form, setForm] = useState("");
   return (
     <Page title="blog">
       <div className="grid lgp:grid-cols-3 gap-10">
@@ -30,10 +32,17 @@ const Blog = () => {
               type="text"
               className="w-full h-full p-3 focus:outline-none  bg-black"
               placeholder="search"
+              value={form}
+              onChange={(e) => {
+                setForm(e.target.value);
+              }}
             />
-            <button className="w-16 h-full flex justify-center items-center bg-light-red">
+            <Link
+              to={`/blog/search/${form}`}
+              className="w-16 h-full flex justify-center items-center bg-light-red"
+            >
               <SearchIcon className={"w-5 h-5"} />{" "}
-            </button>
+            </Link>
           </div>
 
           <div className="p-10 flex  flex-col  bg-gradient-to-b from-dark-gray to-black">
@@ -41,7 +50,8 @@ const Blog = () => {
             <div className="flex flex-col gap-8 mt-10">
               {blogs.slice(0, 3).map((item) => {
                 return (
-                  <div
+                  <Link
+                    to={`/blog/${item.id}`}
                     className="flex items-center gap-5"
                     key={item.id + "blog-sidebar"}
                   >
@@ -59,7 +69,7 @@ const Blog = () => {
                         {item.date}
                       </p>
                     </div>
-                  </div>
+                  </Link>
                 );
               })}
             </div>
@@ -71,7 +81,7 @@ const Blog = () => {
               {blogs[0].tags.split(",").map((item, index) => {
                 return (
                   <Link
-                    to="#"
+                    to={`/blog/search/${item}`}
                     className="capitalize py-4 text-gray border-b-1 border-[rgba(255,255,255,0.1)] hover:pl-1  transition-all duration-300 "
                     key={item.id + "blog-sidebar-categories" + index}
                   >
@@ -87,7 +97,7 @@ const Blog = () => {
               {blogs[0].tags.split(",").map((item, index) => {
                 return (
                   <Link
-                    to="#"
+                    to={`/blog/search/${item}`}
                     className="w-auto px-5 capitalize rounded-sm py-2 text-gray text-sm  bg-[rgba(255,255,255,0.1)]"
                     key={item.id + "blog-sidebar-categories" + index}
                   >

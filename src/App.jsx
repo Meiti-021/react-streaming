@@ -30,6 +30,8 @@ import Cast from "./pages/Cast";
 import Casts from "./pages/Casts";
 import WatchList from "./pages/WatchList";
 import LoadingPage from "./components/LoadingPage";
+import MovieSearch from "./pages/MovieSearch";
+import BlogSearch from "./pages/BlogSearch";
 function App() {
   return (
     <div className="font-roboto">
@@ -53,10 +55,12 @@ function App() {
           <Route path="/blog-left-sidebar" element={<BlogSideBar />} />
           <Route path="/blog-grid/:column" element={<BlogGrid />} />
           <Route path="/blog/:id" element={<SingleBlog />} />
+          <Route path="/blog/search/:word" element={<BlogSearch />} />
           <Route path="/cast/:id" element={<Cast />} />
           <Route path="/cast" element={<Casts />} />
           <Route path="/watch" element={<WatchList />} />
           <Route path="/movies" element={<Movie />} />
+          <Route path="/movies/search/:word" element={<MovieSearch />} />
           <Route path="/movies/load-more" element={<Movie2 />} />
           <Route path="/movies/infinite" element={<Movie3 />} />
           <Route path="/series/:id" element={<Series />} />

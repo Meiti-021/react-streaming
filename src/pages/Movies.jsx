@@ -41,11 +41,11 @@ const Movies = () => {
         <div className="relative mt-10 ">
           <>
             {movie.premium ? (
-              <div className="aspect-video gap-10 w-full h-auto flex flex-col justify-center items-center">
+              <div className="aspect-video mt-20 gap-10 w-full h-auto flex flex-col justify-center items-center">
                 <p className="text-7xl">
-                  <IconLock className="h-44 w-44" />
+                  <IconLock className="sm:h-44 w-24 sm:w-44 h-24" />
                 </p>
-                <p className="text-2xl">
+                <p className="sm:text-2xl text-center">
                   This Content is for Premium users only. please subscribe to
                   unlock this feature.
                 </p>
@@ -82,7 +82,7 @@ const Movies = () => {
       />
       <MovieChart2
         title="Recommended For You"
-        list={[...movies, ...shows].slice(0, 10)}
+        list={[...shows, ...movies].reverse().slice(0, 10)}
       />
     </>
   );

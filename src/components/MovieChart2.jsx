@@ -39,7 +39,7 @@ const MovieChart2 = ({ title = "need a title", list }) => {
           })}
         </Swiper>
         <button
-          className="absolute top-0 bottom-0 text-light-red -left-16 my-auto z-20 "
+          className="absolute top-0 bottom-0 text-light-red -left-11 sm:-left-16 my-auto z-20 "
           onClick={() => {
             swiperRef.current.swiper.slidePrev();
           }}
@@ -47,7 +47,7 @@ const MovieChart2 = ({ title = "need a title", list }) => {
           <ArrowLeft className="h-20 w-20" />
         </button>
         <button
-          className="absolute top-0 bottom-0  text-light-red  -right-16 my-auto z-20 "
+          className="absolute top-0 bottom-0  text-light-red  -right-11 sm:-right-16 my-auto z-20 "
           onClick={() => {
             swiperRef.current.swiper.slideNext();
           }}

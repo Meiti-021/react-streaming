@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   ArrowDown,
   ArrowRight,
@@ -12,6 +12,7 @@ import logo from "../assets/logo.webp";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { menu } from "../services/menu";
+import { useLocation } from "react-router-dom";
 const InnerSubmenu = ({ title, address }) => {
   const [isHover, setIsHover] = useState(false);
   return (
@@ -147,6 +148,10 @@ const InnerSubSideMenu = ({ title, address }) => {
 };
 const SubSideMenu = ({ title, sidemenu, address }) => {
   const [open, setOpen] = useState(false);
+  const { pathname } = useLocation();
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
   if (sidemenu.length === 0) {
     return (
       <li className="h-16 flex items-center w-full border-b-1  border-dark-gray text-lg text-white hover:text-light-red transition-all duration-500">
@@ -181,6 +186,10 @@ const SubSideMenu = ({ title, sidemenu, address }) => {
 };
 const SideMenu = ({ title, submenu, address }) => {
   const [open, setOpen] = useState(false);
+  const { pathname } = useLocation();
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
   if (submenu.length === 0) {
     return (
       <li className="h-20 flex items-center  border-b-1  border-dark-gray w-full text-lg hover:text-light-red transition-all duration-500">
@@ -222,7 +231,11 @@ const Header = () => {
 
   const [searchOpen, setSearchOpen] = useState(false);
   const [sideNavOpen, setSideNavOpen] = useState(false);
-
+  const { pathname } = useLocation();
+  const [search, setSearch] = useState("");
+  useEffect(() => {
+    setSideNavOpen(false);
+  }, [pathname]);
   return (
     <div className="bg-black absolute z-50 w-full h-16 md:h-20 flex justify-center items-center px-5 sm:px-10 text-white">
       <div className="w-full h-full max-w-screen-2xl mx-auto flex items-center ">
@@ -240,15 +253,20 @@ const Header = () => {
                 searchOpen ? "w-44 rounded-2xl px-5" : "w-0"
               }`}
               placeholder="Search..."
+              value={search}
+              onChange={(e) => {
+                setSearch(e.target.value);
+              }}
             />
-            <button
+            <Link
+              to={`/blog/search/${search}`}
               onClick={() => {
                 setSearchOpen(!searchOpen);
               }}
               aria-label="open search input"
             >
               <SearchIcon className={"h-5 w-5"} />
-            </button>
+            </Link>
           </div>
           <Link to={"/login"} aria-label="navigate to account page">
             <UserIcon className={"h-5 w-5"} />

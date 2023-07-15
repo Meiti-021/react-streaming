@@ -25,7 +25,8 @@ export const shows = [
       },
     ],
     imdbRate: "8.2",
-    thriller: "",
+    trailer:
+      "https://archive.org/download/money-heist-part-4-official-trailer-netflix/Money%20Heist_%20Part%204%20_%20Official%20Trailer%20_%20Netflix.mp4",
     reviews: "",
     series: [
       {
@@ -287,7 +288,8 @@ export const shows = [
       },
     ],
     imdbRate: "8.8",
-    thriller: "AK9q6",
+    trailer:
+      "https://archive.org/download/g4tv.com-video61723-flvhd/tr_thelastofus_20121210_story_flvhd.flv",
     reviews: "",
     series: [
       {
@@ -433,7 +435,7 @@ export const shows = [
       },
     ],
     imdbRate: "9.5",
-    thriller: "OxZ0T",
+    trailer: "https://archive.org/download/youtube-sEiMbImQb1A/sEiMbImQb1A.mp4",
     reviews: "",
     series: [
       {
@@ -678,7 +680,7 @@ export const shows = [
       },
     ],
     imdbRate: "8.7",
-    thriller: "urDhv",
+    trailer: "https://archive.org/download/youtube-sEiMbImQb1A/sEiMbImQb1A.mp4",
     reviews: "",
     series: [
       {

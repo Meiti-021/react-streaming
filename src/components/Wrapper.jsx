@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 const Wrapper = ({ children, className }) => {
   return (
-    <section className="p-10">
+    <section className="p-5">
       <div className={`max-w-screen-2xl relative mx-auto ${className}`}>
         {children}
       </div>

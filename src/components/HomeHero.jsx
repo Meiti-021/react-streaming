@@ -137,7 +137,7 @@ const HomeHero = () => {
           </div>
           <div
             key={"hero-info-genres" + movies[index].id}
-            className="flex flex-col gap-5 translate-x-40 text-white p-5 lg:p-10  w-full h-[30rem] max-w-4xl lg:absolute top-0 bottom-0 my-auto"
+            className="flex flex-col gap-5 mt-14 md:mt-48  translate-x-40 text-white p-5 lg:p-10  w-full h-[30rem] max-w-4xl lg:absolute top-0 bottom-0 my-auto"
           >
             <div className="animated faded flex  gap-5 items-center text-white font-roboto-slab">
               <div className="bg-white w-10 text-black h-7 font-bold flex justify-center items-center rounded-sm">
@@ -162,7 +162,7 @@ const HomeHero = () => {
             </p>
             <p
               key={"hero-info-description" + movies[index].id}
-              className="animated faded text-gray font-roboto-slab mb-5"
+              className="animated faded text-gray font-roboto-slab sm:mb-5"
             >
               {movies[index].description.length > 250
                 ? movies[index].description.substring(0, 250) + "..."
@@ -216,7 +216,7 @@ const HomeHero = () => {
               className="flex justify-between items-center  animated faded mt-12"
             >
               <Link
-                to={"/"}
+                to={`/movies/${movies[index].id}`}
                 className=" uppercase flex justify-center items-center w-40 gap-1 p-3  px-8 font-bold text-sm rounded-sm bg-light-red"
               >
                 Stream Now

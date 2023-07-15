@@ -25,7 +25,7 @@ const CastChart = () => {
         <Swiper
           modules={[Navigation]}
           slidesPerView={
-            xl ? 7 : lg ? 6 : md ? 5 : lm ? 4 : sm ? 3 : xs ? 2 : 1
+            xl ? 6 : lg ? 5 : md ? 4 : lm ? 3 : sm ? 2 : xs ? 1 : 1
           }
           spaceBetween={"25"}
           ref={swiperRef}
@@ -34,14 +34,14 @@ const CastChart = () => {
           {cast.map((item, index) => {
             return (
               <SwiperSlide
-                className="relative bg-dark-gray  w-full h-72 flex justify-center items-center"
+                className="relative bg-dark-gray  w-full h-[30rem] flex justify-center items-center"
                 key={"cast-chart-item" + index + item.id}
               >
-                <Link to="/" className="flex w-full flex-col">
+                <Link to={`/cast/${item.id}`} className="flex w-full flex-col">
                   <img
                     src={`/assets/casts/${item.id}.webp`}
                     alt=""
-                    className="block w-full h-56 object-cover object-top"
+                    className="block w-full h-[24rem] object-cover object-top"
                   />
                   <div className="flex flex-col gap-1 justify-center items-center p-4">
                     <p className="text-base">{item.name}</p>
@@ -53,7 +53,7 @@ const CastChart = () => {
           })}
         </Swiper>
         <button
-          className="absolute top-0 bottom-0 text-light-red -left-16 my-auto z-20 "
+          className="absolute top-0 bottom-0 text-light-red sm:-left-16 -left-11 my-auto z-20 "
           onClick={() => {
             swiperRef.current.swiper.slidePrev();
           }}
@@ -61,7 +61,7 @@ const CastChart = () => {
           <ArrowLeft className="h-20 w-20" />
         </button>
         <button
-          className="absolute top-0 bottom-0  text-light-red  -right-16 my-auto z-20 "
+          className="absolute top-0 bottom-0  text-light-red  sm:-right-16 -right-11 my-auto z-20 "
           onClick={() => {
             swiperRef.current.swiper.slideNext();
           }}

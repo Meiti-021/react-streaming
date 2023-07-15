@@ -167,7 +167,7 @@ const ShowHero = () => {
             </div>
             <p
               key={"hero-info-titles" + shows[index].id}
-              className="animated faded font-roboto text-6xl lg:text-[5.2rem] font-extrabold bg-[url(/assets/others/bg.webp)] bg-clip-text text-transparent"
+              className="animated faded font-roboto whitespace-nowrap text-ellipsis text-6xl lg:text-[5.2rem] font-extrabold bg-[url(/assets/others/bg.webp)] bg-clip-text text-transparent"
             >
               {shows[index].title}
             </p>
