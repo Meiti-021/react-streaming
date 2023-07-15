@@ -1,6 +1,10 @@
 # Streaming Website
 
-Welcome to the Streaming project! This is a React-based website built with various libraries and tools such as Material UI, Tailwind, Vite, SwiperJS, Video.js, Notistack, Redux Toolkit, Moment.js, Lottie React, and Anime.js. The website supports playlist management, a liking system, subscription plans, and blogs.
+![preview](./public/preview.png)
+
+Welcome to the Streaming Website project! This is a frontend demo of a streaming website built with React, Material UI, Tailwind, and other libraries. The project showcases various features such as playlist management, a liking system, subscription plans, and a blog.
+
+Please note that this project is a frontend demo and does not include a real backend or server-side functionality. It is meant to demonstrate the user interface and frontend implementation of a streaming website.
 
 ## Features
 

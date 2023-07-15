@@ -104,7 +104,7 @@ const Series = () => {
       />
       <MovieChart2
         title="Recommended For You"
-        list={[...movies, ...shows].slice(0, 10)}
+        list={[...shows, ...movies].slice(0, 10)}
       />
     </>
   );

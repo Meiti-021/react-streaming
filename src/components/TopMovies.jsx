@@ -19,7 +19,7 @@ const TopMovies = () => {
         <header className="mb-5">
           <h2 className="text-2xl">Top 10 Movies To Watch</h2>
         </header>
-        <div className=" relative">
+        <div className="relative">
           <Swiper
             modules={[Navigation]}
             slidesPerView={xl ? 5 : lg ? 4 : md ? 3 : sm ? 2 : 1}
@@ -35,17 +35,17 @@ const TopMovies = () => {
                 >
                   <Link
                     to={`/movies/${item.id}`}
-                    className="relative  w-full h-full block "
+                    className="relative z-10 w-full h-full block "
                   >
+                    <p className="absolute text-9xl  z-20 font-bold -bottom-10 left-0 text-transparent bg-clip-text bg-[url(/assets/others/bg.webp)] bg-cover ">
+                      {index + 1}
+                    </p>
                     <img
                       src={`/assets/collections/${item.mainImage}`}
                       alt=""
-                      className=" block w-full h-full object-cover"
+                      className="absolute  block w-full h-full object-cover"
                     />
                   </Link>
-                  <p className="absolute text-[7rem] z-20 font-extrabold text-transparent bg-clip-text bg-[url(/assets/others/bg.webp)] right-0 left-0 mx-auto -bottom-20">
-                    {index + 1}
-                  </p>
                 </SwiperSlide>
               );
             })}

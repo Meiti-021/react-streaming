@@ -25,7 +25,7 @@ const CastChart = () => {
         <Swiper
           modules={[Navigation]}
           slidesPerView={
-            xl ? 6 : lg ? 5 : md ? 4 : lm ? 3 : sm ? 2 : xs ? 1 : 1
+            xl ? 5 : lg ? 4 : md ? 3 : lm ? 2 : sm ? 2 : xs ? 2 : 1
           }
           spaceBetween={"25"}
           ref={swiperRef}

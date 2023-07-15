@@ -120,7 +120,7 @@ const ShowSource = ({ movie, season, setEpisode, episode }) => {
                         episode === index ? "text-light-red" : undefined
                       }`}
                     >
-                      <p>{item.name}</p>
+                      <p className="text-left">{item.name}</p>
                       <p> {`S0${season + 1}E0${index + 1}`}</p>
                     </div>
                     <p className="text-sm text-gray  text-left">
