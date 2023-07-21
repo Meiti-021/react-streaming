@@ -9,18 +9,15 @@ import {
 } from "../utils/icons";
 import logo from "../assets/logo.webp";
 import PropTypes from "prop-types";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { menu } from "../services/menu";
 import HeaderSearch from "./HeaderSearch";
 const InnerSubmenu = ({ title, address }) => {
   const [isHover, setIsHover] = useState(false);
-  const navigate = useNavigate();
   return (
-    <button
-      onClick={() => {
-        navigate(address);
-      }}
-      className="relative flex h-10 "
+    <Link
+      to={address}
+      className="relative flex h-10"
       onMouseEnter={() => {
         setIsHover(true);
       }}
@@ -39,7 +36,7 @@ const InnerSubmenu = ({ title, address }) => {
         }`}
       ></span>
       <p className="relative z-20 text-sm flex items-center px-5">{title}</p>
-    </button>
+    </Link>
   );
 };
 
@@ -47,54 +44,81 @@ const Submenu = ({ address, title, sidemenu }) => {
   const [isHover, setIsHover] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
   return (
-    <Link
-      to={address}
-      className="relative flex h-10 "
-      onMouseEnter={() => {
-        setIsHover(true);
-        setOpenMenu(true);
-      }}
-      onMouseLeave={() => {
-        setIsHover(false);
-        setOpenMenu(false);
-      }}
-    >
-      <div
-        className={`absolute h-full z-10 bg-gradient-to-r from-dark-red to-black transition-all duration-500 ${
-          isHover ? "w-full" : "w-0"
-        }`}
-      ></div>
-      <span
-        className={`h-full relative transition-all duration-500 z-20  bg-light-red ${
-          isHover ? "w-1" : "w-0"
-        }`}
-      ></span>
-      {sidemenu.length === 0 ? (
-        <p className="relative z-20 text-sm flex items-center  px-5">{title}</p>
-      ) : (
-        <p className="relative z-20 text-sm flex justify-between items-center px-5 w-full">
-          {title} <ArrowRight />{" "}
-        </p>
-      )}
-      {sidemenu.length ? (
-        <ul
-          className={`w-72 transition-all border-1 border-dark-gray flex flex-col gap-2  h-auto absolute left-full bg-black p-4 duration-500 top-18 rounded-sm ${
-            openMenu
-              ? "opacity-100 pointer-events-auto"
-              : "opacity-0 pointer-events-none"
-          }`}
+    <>
+      {!address ? (
+        <div
+          className="relative flex h-10 "
+          onMouseEnter={() => {
+            setIsHover(true);
+            setOpenMenu(true);
+          }}
+          onMouseLeave={() => {
+            setIsHover(false);
+            setOpenMenu(false);
+          }}
         >
-          {sidemenu.map((list, index) => {
-            return (
-              <InnerSubmenu
-                {...list}
-                key={"submenuitem" + index + list.address}
-              />
-            );
-          })}
-        </ul>
-      ) : undefined}
-    </Link>
+          <div
+            className={`absolute h-full z-10 bg-gradient-to-r from-dark-red to-black transition-all duration-500 ${
+              isHover ? "w-full" : "w-0"
+            }`}
+          ></div>
+          <span
+            className={`h-full relative transition-all duration-500 z-20  bg-light-red ${
+              isHover ? "w-1" : "w-0"
+            }`}
+          ></span>
+
+          <p className="relative z-20 text-sm flex justify-between items-center px-5 w-full">
+            {title} <ArrowRight />{" "}
+          </p>
+
+          <ul
+            className={`w-72 transition-all border-1 border-dark-gray flex flex-col gap-2  h-auto absolute left-full bg-black p-4 duration-500 top-18 rounded-sm ${
+              openMenu
+                ? "opacity-100 pointer-events-auto"
+                : "opacity-0 pointer-events-none"
+            }`}
+          >
+            {sidemenu.map((list, index) => {
+              return (
+                <InnerSubmenu
+                  {...list}
+                  key={"submenuitem" + index + list.address}
+                />
+              );
+            })}
+          </ul>
+        </div>
+      ) : (
+        <Link
+          to={address}
+          className="relative flex h-10 "
+          onMouseEnter={() => {
+            setIsHover(true);
+            setOpenMenu(true);
+          }}
+          onMouseLeave={() => {
+            setIsHover(false);
+            setOpenMenu(false);
+          }}
+        >
+          <div
+            className={`absolute h-full z-10 bg-gradient-to-r from-dark-red to-black transition-all duration-500 ${
+              isHover ? "w-full" : "w-0"
+            }`}
+          ></div>
+          <span
+            className={`h-full relative transition-all duration-500 z-20  bg-light-red ${
+              isHover ? "w-1" : "w-0"
+            }`}
+          ></span>
+
+          <p className="relative z-20 text-sm flex items-center  px-5">
+            {title}
+          </p>
+        </Link>
+      )}
+    </>
   );
 };
 
@@ -148,8 +172,11 @@ const InnerSubSideMenu = ({ title, address }) => {
     </li>
   );
 };
-const SubSideMenu = ({ title, sidemenu, address }) => {
+const SubSideMenu = ({ title, sidemenu, address, pathname }) => {
   const [open, setOpen] = useState(false);
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
   if (sidemenu.length === 0) {
     return (
       <li className="h-16 flex items-center w-full border-b-1  border-dark-gray text-lg text-white hover:text-light-red transition-all duration-500">
@@ -189,8 +216,11 @@ const SubSideMenu = ({ title, sidemenu, address }) => {
     </li>
   );
 };
-const SideMenu = ({ title, submenu, address }) => {
+const SideMenu = ({ title, submenu, address, pathname }) => {
   const [open, setOpen] = useState(false);
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
   if (submenu.length === 0) {
     return (
       <li className="h-20 flex items-center  border-b-1  border-dark-gray w-full text-lg hover:text-light-red transition-all duration-500">
@@ -226,7 +256,13 @@ const SideMenu = ({ title, submenu, address }) => {
       </div>
       <ul className="p-5">
         {submenu.map((item) => {
-          return <SubSideMenu {...item} key={"subsidemenuitem" + item.title} />;
+          return (
+            <SubSideMenu
+              {...item}
+              key={"subsidemenuitem" + item.title}
+              pathname={pathname}
+            />
+          );
         })}
       </ul>
     </li>
@@ -287,7 +323,13 @@ const Header = () => {
         >
           <ul className="flex flex-col ">
             {menu.map((item) => {
-              return <SideMenu {...item} key={"sidenav-item" + item.title} />;
+              return (
+                <SideMenu
+                  {...item}
+                  key={"sidenav-item" + item.title}
+                  pathname={pathname}
+                />
+              );
             })}
           </ul>
         </div>
@@ -303,6 +345,7 @@ SideMenu.propTypes = {
   title: PropTypes.string,
   address: PropTypes.string,
   submenu: PropTypes.array,
+  pathname: PropTypes.string,
 };
 SubSideMenu.propTypes = Submenu.propTypes = {
   title: PropTypes.string,

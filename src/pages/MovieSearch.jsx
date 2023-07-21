@@ -5,12 +5,13 @@ import { Pagination } from "@mui/material";
 import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect } from "react";
+import LoadingPage from "../components/LoadingPage";
 const MovieSearch = () => {
   const { word } = useParams();
   const navigate = useNavigate();
   const { movies, shows } = useSelector((store) => store.movieData);
   const [page, setPage] = useState(0);
-  const [search, setSearch] = useState([]);
+  const [search, setSearch] = useState("");
   useEffect(() => {
     const array = [...movies, ...shows].filter((item) => {
       if (
@@ -22,6 +23,9 @@ const MovieSearch = () => {
     });
     setSearch(array);
   }, [word, movies, shows]);
+  if (search === "") {
+    return <LoadingPage />;
+  }
   if (!search.length) {
     return (
       <Page title={`movies?=${word.substring(0, 7)}...`}>

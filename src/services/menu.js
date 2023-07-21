@@ -6,6 +6,7 @@ export const menu = [
   },
   {
     title: "Features",
+    address: "",
     submenu: [
       {
         address: "/movies/johnwick",
@@ -41,6 +42,7 @@ export const menu = [
   },
   {
     title: "Pages",
+    address: "",
     submenu: [
       {
         address: "/about",
@@ -91,7 +93,7 @@ export const menu = [
         ],
       },
       {
-        address: "/",
+        address: "",
         title: "Error Page",
         sidemenu: [
           {
@@ -108,6 +110,7 @@ export const menu = [
   },
   {
     title: "Blog",
+    address: "",
     submenu: [
       {
         address: "/blog",
@@ -115,7 +118,7 @@ export const menu = [
         sidemenu: [],
       },
       {
-        address: "/",
+        address: "",
         title: "Blog Grid",
         sidemenu: [
           {
@@ -133,7 +136,7 @@ export const menu = [
         ],
       },
       {
-        address: "/",
+        address: "",
         title: "Blog Sidebar",
         sidemenu: [
           {
@@ -147,7 +150,7 @@ export const menu = [
         ],
       },
       {
-        address: "/",
+        address: "",
         title: "Blog",
         sidemenu: [
           {
@@ -177,7 +180,7 @@ export const menu = [
         ],
       },
       {
-        address: "/",
+        address: "",
         title: "Pagination style",
         sidemenu: [
           {

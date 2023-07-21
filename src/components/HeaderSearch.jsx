@@ -19,7 +19,7 @@ const HeaderSearch = () => {
         }}
       />
       <Link
-        to={search}
+        to={`/movies/search/${search}`}
         onMouseEnter={() => {
           setSearchOpen(!searchOpen);
         }}
