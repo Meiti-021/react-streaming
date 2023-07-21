@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { useState } from "react";
+import { memo, useState } from "react";
 import {
   IconFacebook,
   IconHeart,
@@ -13,7 +13,7 @@ import {
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToWatchlist, likeMovie } from "../data/moviesSlice";
-const MovieCard3 = ({ timing, title, likes, bgImage, id, liked }) => {
+const MovieCard3 = memo(({ timing, title, likes, bgImage, id, liked }) => {
   const [mouseIn, setMouseIn] = useState(false);
   const [isHoverHeart, setIsHoverHeart] = useState(false);
   const [isHoverShare, setIsHoverShare] = useState(false);
@@ -130,7 +130,7 @@ const MovieCard3 = ({ timing, title, likes, bgImage, id, liked }) => {
       </div>
     </div>
   );
-};
+});
 
 MovieCard3.propTypes = {
   bgImage: PropTypes.string,
@@ -140,4 +140,5 @@ MovieCard3.propTypes = {
   likes: PropTypes.number,
   liked: PropTypes.bool,
 };
+MovieCard3.displayName = "MovieCard3";
 export default MovieCard3;

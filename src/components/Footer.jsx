@@ -63,7 +63,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col  sm:col-span-2 xl:col-span-3 gap-10">
             <p className="text-lg font-semibold">Subscribe To Newsletter</p>
-            <div className="flex bg-dark-gray h-12">
+            {/* <div className="flex bg-dark-gray h-12">
               <input
                 type="email"
                 className="bg-semi-dark-gray border-none p-4 h-full w-9/12 text-white focus:border-none focus:outline-none"
@@ -72,7 +72,7 @@ const Footer = () => {
               <button className="h-full min-w-min p-3 w-3/12 bg-light-red text-white rounded-sm">
                 SUBSCRIBE
               </button>
-            </div>
+            </div> */}
             <div className="flex items-center gap-4">
               <p className="text-sm">Follow Us :</p>
               <a href="/">

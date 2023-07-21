@@ -3,12 +3,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
-import { useRef } from "react";
+import { memo, useRef } from "react";
 import { ArrowLeft, ArrowRight } from "../utils/icons";
 import { useMediaQuery } from "@mui/material";
 import PropTypes from "prop-types";
 import MovieCard3 from "./MovieCard3";
-const MovieChart2 = ({ title = "need a title", list }) => {
+const MovieChart2 = memo(({ title = "need a title", list }) => {
   const swiperRef = useRef(null);
   const xl = useMediaQuery("(min-width: 1400px)");
   const lg = useMediaQuery("(min-width: 1227px)");
@@ -57,12 +57,13 @@ const MovieChart2 = ({ title = "need a title", list }) => {
       </div>
     </Wrapper>
   );
-};
+});
 
 MovieChart2.propTypes = {
   title: PropTypes.string,
   list: PropTypes.array,
 };
+MovieChart2.displayName = "MovieChart2";
 
 export default MovieChart2;
 2;

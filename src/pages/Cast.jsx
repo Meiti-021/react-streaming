@@ -7,36 +7,47 @@ import MovieCard3 from "../components/MovieCard3";
 import { IconFacebook, IconInstagram, IconLinkedin } from "../utils/icons";
 import { Tab, Tabs, useMediaQuery } from "@mui/material";
 import { useSelector } from "react-redux";
+import { startTransition } from "react";
+import LoadingPage from "../components/LoadingPage";
+import Error from "./Error";
 const Cast = () => {
   const { id } = useParams();
   const { movies, shows } = useSelector((store) => store.movieData);
 
-  const [artist, setArtist] = useState(null);
+  const [artist, setArtist] = useState("");
   const [movie, setMovie] = useState([]);
   const [show, setShow] = useState([]);
   const [value, setValue] = useState(0);
   const sm = useMediaQuery("(min-width: 640px)");
   useEffect(() => {
-    const crew = cast.find((item) => item.id === id);
-    const arrayMovie = [];
-    const arrayShow = [];
-    movies.forEach((item) => {
-      if (item.casts.find((elem) => elem.id === id)) {
-        arrayMovie.push(item);
-      }
+    startTransition(() => {
+      const crew = cast.find((item) => item.id === id);
+      const arrayMovie = [];
+      const arrayShow = [];
+      movies.forEach((item) => {
+        if (item.casts.find((elem) => elem.id === id)) {
+          arrayMovie.push(item);
+        }
+      });
+      shows.forEach((item) => {
+        if (item.casts.find((elem) => elem.id === id)) {
+          arrayShow.push(item);
+        }
+      });
+      setArtist(crew);
+      setMovie(arrayMovie);
+      setShow(arrayShow);
     });
-    shows.forEach((item) => {
-      if (item.casts.find((elem) => elem.id === id)) {
-        arrayShow.push(item);
-      }
-    });
-    setArtist(crew);
-    setMovie(arrayMovie);
-    setShow(arrayShow);
   }, [id, movies, shows]);
-  if (artist === null) {
-    return <>hi</>;
+
+  if (artist === "") {
+    return <LoadingPage />;
   }
+
+  if (artist === undefined) {
+    return <Error />;
+  }
+
   return (
     <Wrapper>
       <div className="flex flex-col mdp:flex-row mdp:gap-5 gap-10 mt-16">
@@ -97,7 +108,6 @@ const Cast = () => {
           <Tabs
             value={value}
             onChange={(e, newValue) => setValue(newValue)}
-            textColor="white"
             TabIndicatorProps={{
               style: { backgroundColor: "#E50914" },
             }}

@@ -4,8 +4,8 @@ export const movies = [
     title: "John Wick",
     genres: "Action, Crime",
     mainImage: "johnwick.webp",
-    thumbImage: "johnwick-thumb.webp",
-    bgImage: "johnwick-bg.webp",
+    thumbImage: "johnwick-thumb-min.webp",
+    bgImage: "johnwick-bg-min.webp",
     casts: [
       {
         id: "keanuReeves",
@@ -55,8 +55,8 @@ export const movies = [
     title: "The covenant",
     genres: "Action, War",
     mainImage: "covenant.webp",
-    thumbImage: "covenant-thumb.webp",
-    bgImage: "covenant.webp",
+    thumbImage: "covenant-thumb-min.webp",
+    bgImage: "covenant-min.webp",
     casts: [
       {
         id: "jakegyllenhaal",
@@ -97,8 +97,8 @@ export const movies = [
     title: "Super mario bros",
     genres: "Animation, Adventure, Comedy",
     mainImage: "mario.webp",
-    thumbImage: "mario-thumb.webp",
-    bgImage: "mario-bg.webp",
+    thumbImage: "mario-thumb-min.webp",
+    bgImage: "mario-bg-min.webp",
     casts: [
       {
         id: "anyaTaylor",
@@ -151,8 +151,8 @@ export const movies = [
     title: "Interstellar",
     genres: "Adventure, drama, sci-fi",
     mainImage: "interstellar.webp",
-    thumbImage: "iterstellar-thumb.webp",
-    bgImage: "interstellar-bg.webp",
+    thumbImage: "iterstellar-thumb-min.webp",
+    bgImage: "interstellar-bg-min.webp",
     casts: [
       {
         id: "mattDamon",
@@ -206,8 +206,8 @@ export const movies = [
     title: "Inception",
     genres: "Action, Advanture, sci-fi",
     mainImage: "inception.webp",
-    thumbImage: "inception-thumb.webp",
-    bgImage: "inception-bg.webp",
+    thumbImage: "inception-thumb-min.webp",
+    bgImage: "inception-bg-min.webp",
     casts: [
       {
         id: "leonardoDiCaprio",
@@ -256,8 +256,8 @@ export const movies = [
     title: "Joker",
     genres: "Crime, Drama",
     mainImage: "joker.webp",
-    thumbImage: "joker.webp",
-    bgImage: "joker.webp",
+    thumbImage: "joker-min.webp",
+    bgImage: "joker-min.webp",
     casts: [
       {
         id: "toddPhillips",
@@ -298,8 +298,8 @@ export const movies = [
     title: "puss in boots",
     genres: "Animation, Advanture, Comedy",
     mainImage: "puss-bg.webp",
-    thumbImage: "puss-thumb.webp",
-    bgImage: "puss.webp",
+    thumbImage: "puss-thumb-min.webp",
+    bgImage: "puss-min.webp",
     casts: [
       {
         id: "harveyGuillen",
@@ -349,8 +349,8 @@ export const movies = [
     title: "The Matrix",
     genres: "Action , sci-fi",
     mainImage: "matrix.webp",
-    thumbImage: "matrix-thumb.webp",
-    bgImage: "matrix-bg.webp",
+    thumbImage: "matrix-thumb-min.webp",
+    bgImage: "matrix-bg-min.webp",
     casts: [
       {
         id: "keanuReeves",

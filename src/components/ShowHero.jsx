@@ -222,7 +222,7 @@ const ShowHero = () => {
               className="flex justify-between items-center  animated faded mt-12"
             >
               <Link
-                to={"/"}
+                to={`/series/${shows[index].id}`}
                 className=" uppercase flex justify-center items-center w-40 gap-1 p-3  px-8 font-bold text-sm rounded-sm bg-light-red"
               >
                 Stream Now

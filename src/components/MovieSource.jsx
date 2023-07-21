@@ -65,7 +65,6 @@ const MovieSource = ({ movie }) => {
         <Tabs
           value={value}
           onChange={(e, newValue) => setValue(newValue)}
-          textColor="white"
           TabIndicatorProps={{
             style: { backgroundColor: "#E50914" },
           }}

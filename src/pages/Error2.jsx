@@ -27,10 +27,10 @@ const Error2 = () => {
       <button
         className="h-10 text-sm w-36 bg-light-red mdp:left-52 rounded flex justify-center items-center gap-1 relative"
         onClick={() => {
-          navigate(-1);
+          navigate("/");
         }}
       >
-        GO BACK
+        GO HOME
       </button>
     </div>
   );

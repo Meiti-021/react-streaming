@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import {
   ArrowDown,
   ArrowRight,
-  SearchIcon,
   UserIcon,
   MenuIcon,
   PlusIcon,
@@ -10,14 +9,17 @@ import {
 } from "../utils/icons";
 import logo from "../assets/logo.webp";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { menu } from "../services/menu";
-import { useLocation } from "react-router-dom";
+import HeaderSearch from "./HeaderSearch";
 const InnerSubmenu = ({ title, address }) => {
   const [isHover, setIsHover] = useState(false);
+  const navigate = useNavigate();
   return (
-    <Link
-      to={address}
+    <button
+      onClick={() => {
+        navigate(address);
+      }}
       className="relative flex h-10 "
       onMouseEnter={() => {
         setIsHover(true);
@@ -37,7 +39,7 @@ const InnerSubmenu = ({ title, address }) => {
         }`}
       ></span>
       <p className="relative z-20 text-sm flex items-center px-5">{title}</p>
-    </Link>
+    </button>
   );
 };
 
@@ -148,14 +150,17 @@ const InnerSubSideMenu = ({ title, address }) => {
 };
 const SubSideMenu = ({ title, sidemenu, address }) => {
   const [open, setOpen] = useState(false);
-  const { pathname } = useLocation();
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
   if (sidemenu.length === 0) {
     return (
       <li className="h-16 flex items-center w-full border-b-1  border-dark-gray text-lg text-white hover:text-light-red transition-all duration-500">
-        <Link to={address}>{title}</Link>
+        <Link
+          to={address}
+          onClick={() => {
+            setOpen(false);
+          }}
+        >
+          {title}
+        </Link>
       </li>
     );
   }
@@ -186,14 +191,17 @@ const SubSideMenu = ({ title, sidemenu, address }) => {
 };
 const SideMenu = ({ title, submenu, address }) => {
   const [open, setOpen] = useState(false);
-  const { pathname } = useLocation();
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
   if (submenu.length === 0) {
     return (
       <li className="h-20 flex items-center  border-b-1  border-dark-gray w-full text-lg hover:text-light-red transition-all duration-500">
-        <Link to={address}>{title}</Link>
+        <Link
+          to={address}
+          onClick={() => {
+            setOpen(false);
+          }}
+        >
+          {title}
+        </Link>
       </li>
     );
   }
@@ -228,11 +236,8 @@ const SideMenu = ({ title, submenu, address }) => {
 const Header = () => {
   const sideNav = useRef(null);
   const sideNavPaper = useRef(null);
-
-  const [searchOpen, setSearchOpen] = useState(false);
   const [sideNavOpen, setSideNavOpen] = useState(false);
   const { pathname } = useLocation();
-  const [search, setSearch] = useState("");
   useEffect(() => {
     setSideNavOpen(false);
   }, [pathname]);
@@ -246,29 +251,7 @@ const Header = () => {
           })}
         </ul>
         <div className="flex gap-10 ml-auto items-center">
-          <div className="flex">
-            <input
-              type="text"
-              className={`transition-all duration-300 mr-4 h-8 bg-black  text-gray ${
-                searchOpen ? "w-44 rounded-2xl px-5" : "w-0"
-              }`}
-              placeholder="Search..."
-              value={search}
-              onChange={(e) => {
-                setSearch(e.target.value);
-              }}
-            />
-            <Link
-              to={`/blog/search/${search}`}
-              onMouseEnter={() => {
-                setSearchOpen(!searchOpen);
-              }}
-              aria-label="open search input"
-              className="flex justify-center items-center"
-            >
-              <SearchIcon className={"h-5 w-5"} />
-            </Link>
-          </div>
+          <HeaderSearch />
           <Link
             to={"/login"}
             aria-label="navigate to account page"

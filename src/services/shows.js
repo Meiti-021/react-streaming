@@ -4,8 +4,8 @@ export const shows = [
     title: "Money Heist",
     genres: "Action, Crime, Drama",
     mainImage: "money-heist.webp",
-    thumbImage: "money-heist-thumb.webp",
-    bgImage: "money-heist-bg.webp",
+    thumbImage: "money-heist-thumb-min.webp",
+    bgImage: "money-heist-bg-min.webp",
     casts: [
       {
         id: "alvaroMorty",
@@ -267,8 +267,8 @@ export const shows = [
     title: "The Last Of US",
     genres: "Action, Adventure, Drama",
     mainImage: "lastofus.webp",
-    thumbImage: "lastofus-thumb.webp",
-    bgImage: "lastofus-bg.webp",
+    thumbImage: "lastofus-thumb-min.webp",
+    bgImage: "lastofus-bg-min.webp",
     casts: [
       {
         id: "pedroPascal",
@@ -410,8 +410,8 @@ export const shows = [
     title: "Breaking Bad",
     genres: "Crime, Drama",
     mainImage: "breaking.webp",
-    thumbImage: "breaking-bg.webp",
-    bgImage: "breaking-bg.webp",
+    thumbImage: "breaking-bg-min.webp",
+    bgImage: "breaking-bg-min.webp",
     casts: [
       {
         id: "bryanCranston",
@@ -651,8 +651,8 @@ export const shows = [
     title: "The Boys",
     genres: "Action, Comedy, Crime",
     mainImage: "theboys.webp",
-    thumbImage: "theboys-thumb.webp",
-    bgImage: "theboys-bg.webp",
+    thumbImage: "theboys-thumb-min.webp",
+    bgImage: "theboys-bg-min.webp",
     casts: [
       {
         id: "antonystarr",

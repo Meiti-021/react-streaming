@@ -198,13 +198,13 @@ const MovieInfo = ({ movie, season, episode }) => {
             </div>
           </div>
         </div>
-        <p className="flex text-sm xs:text-lg items-center gap-5">
+        <div className="flex text-sm xs:text-lg items-center gap-5">
           <p className="text-light-red  h-full flex items-center gap-1 ">
             <IconTag />
             TAGS :
           </p>
           <p className="h-full flex items-center">{movie.genres}</p>
-        </p>
+        </div>
       </div>
       <a
         target="_blank"

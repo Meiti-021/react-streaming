@@ -65,13 +65,13 @@ const ShowSource = ({ movie, season, setEpisode, episode }) => {
         <Tabs
           value={value}
           onChange={(e, newValue) => setValue(newValue)}
-          textColor="white"
           TabIndicatorProps={{
             style: { backgroundColor: "#E50914" },
           }}
         >
           <Tab
             label="Episodes"
+            value={0}
             sx={{
               color: value == 0 ? "#E50914" : "white",
               fontFamily: "Roboto",
@@ -80,6 +80,7 @@ const ShowSource = ({ movie, season, setEpisode, episode }) => {
           />
           <Tab
             label="Reviews"
+            value={1}
             sx={{
               color: value == 1 ? "#E50914" : "white",
               fontFamily: "Roboto",
@@ -88,6 +89,7 @@ const ShowSource = ({ movie, season, setEpisode, episode }) => {
           />
           <Tab
             label="Description"
+            value={2}
             sx={{
               color: value == 2 ? "#E50914" : "white",
               fontFamily: "Roboto",
@@ -98,7 +100,7 @@ const ShowSource = ({ movie, season, setEpisode, episode }) => {
       </div>
       <div className="py-10">
         {value === 0 ? (
-          <div className="flex flex-col  gap-4">
+          <div className="flex flex-col  gap-4" key={"tabpanel-1"}>
             {movie.series[season].episodes.map((item, index) => {
               return (
                 <button
@@ -132,7 +134,7 @@ const ShowSource = ({ movie, season, setEpisode, episode }) => {
             })}
           </div>
         ) : value === 1 ? (
-          <div className="flex flex-col gap-10">
+          <div className="flex flex-col gap-10" key={"tabpanel-2"}>
             {reviews.map((item, index) => {
               return (
                 <Comment {...item} key={item.user.id + "comment" + index} />
@@ -246,7 +248,7 @@ const ShowSource = ({ movie, season, setEpisode, episode }) => {
             </form>
           </div>
         ) : (
-          <p>{movie.description}</p>
+          <p key={"tabpanel-3"}>{movie.description}</p>
         )}
       </div>
     </div>

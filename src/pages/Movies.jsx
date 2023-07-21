@@ -1,39 +1,30 @@
 import Wrapper from "../components/Wrapper";
 import { useEffect, useState } from "react";
 import VideoJS from "../components/Videojs";
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import MovieChart2 from "../components/MovieChart2";
 import MovieInfo from "../components/MovieInfo";
 import MovieSource from "../components/MovieSource";
 import MovieCast from "../components/MovieCast";
-import Loading from "../components/Loading";
 import { IconLock } from "../utils/icons";
 import { useSelector } from "react-redux";
+import LoadingPage from "../components/LoadingPage";
+import Error2 from "./Error2";
 const Movies = () => {
   const { id } = useParams();
   const { movies, shows } = useSelector((store) => store.movieData);
-
-  const [movie, setMovie] = useState(undefined);
-  const [loading, setLoading] = useState(false);
-  const path = useLocation();
+  const [movie, setMovie] = useState("");
   useEffect(() => {
     const exist = movies.find((item) => item.id === id);
     setMovie(exist);
   }, [id, movies, shows]);
 
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 2500);
-  }, [path]);
-
-  if (loading) {
-    return <Loading />;
+  if (movie === "") {
+    return <LoadingPage />;
   }
 
   if (movie === undefined) {
-    return <h1>404</h1>;
+    return <Error2 />;
   }
   return (
     <>

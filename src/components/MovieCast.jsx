@@ -6,9 +6,9 @@ import { Navigation } from "swiper";
 import { ArrowLeft, ArrowRight } from "../utils/icons";
 import { cast } from "../services/cast";
 import { Link } from "react-router-dom";
-import { useRef } from "react";
+import { memo, useRef } from "react";
 import { useMediaQuery } from "@mui/material";
-const MovieCast = ({ movie }) => {
+const MovieCast = memo(({ movie }) => {
   const swiperRef = useRef(null);
   const xl = useMediaQuery("(min-width: 1400px)");
   const lg = useMediaQuery("(min-width: 1227px)");
@@ -72,8 +72,9 @@ const MovieCast = ({ movie }) => {
       </div>
     </div>
   );
-};
+});
 MovieCast.propTypes = {
   movie: PropTypes.object,
 };
+MovieCast.displayName = "MovieCast";
 export default MovieCast;

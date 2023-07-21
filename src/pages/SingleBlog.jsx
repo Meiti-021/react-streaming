@@ -18,6 +18,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import BlogComment from "../components/BlogComment";
 import { addComment } from "../data/blogSlice";
+import LoadingPage from "../components/LoadingPage";
 const SingleBlog = () => {
   const { blogsData } = useSelector((store) => store.blogData);
   const { id } = useParams();
@@ -64,7 +65,7 @@ const SingleBlog = () => {
   }, [review]);
 
   if (blog === null) {
-    return <>oh Sorry</>;
+    return <LoadingPage />;
   }
 
   return (

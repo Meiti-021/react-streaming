@@ -29,7 +29,6 @@ import { SnackbarProvider } from "notistack";
 import Cast from "./pages/Cast";
 import Casts from "./pages/Casts";
 import WatchList from "./pages/WatchList";
-import LoadingPage from "./components/LoadingPage";
 import MovieSearch from "./pages/MovieSearch";
 import BlogSearch from "./pages/BlogSearch";
 function App() {
@@ -37,7 +36,6 @@ function App() {
     <div className="font-roboto relative">
       <SnackbarProvider />
       <BrowserRouter>
-        <LoadingPage />
         <ScrollToTop />
         <Header />
         <Routes>
@@ -74,6 +72,7 @@ function App() {
           <Route path="/privacy-policy" element={<Policy />} />
           <Route path="*" element={<Error />} />
         </Routes>
+
         <Footer />
       </BrowserRouter>
     </div>

@@ -1,40 +1,33 @@
 import Wrapper from "../components/Wrapper";
 import { useEffect, useState } from "react";
 import VideoJS from "../components/Videojs";
-import { useLocation, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import MovieChart2 from "../components/MovieChart2";
 import MovieInfo from "../components/MovieInfo";
 import MovieCast from "../components/MovieCast";
-import Loading from "../components/Loading";
 import { IconLock } from "../utils/icons";
 import ShowSource from "../components/ShowSource";
 import { useSelector } from "react-redux";
+import Error2 from "./Error2";
+import LoadingPage from "../components/LoadingPage";
 const Series = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const { movies, shows } = useSelector((store) => store.movieData);
-  const [show, setShow] = useState(undefined);
+  const [show, setShow] = useState("");
   const [episode, setEpisode] = useState(0);
   const [season, setSeason] = useState(0);
-  const [loading, setLoading] = useState(false);
-  const path = useLocation();
   useEffect(() => {
     const exist = shows.find((item) => item.id === id);
     setShow(exist);
-  }, [id, movies, shows]);
+  }, [id, movies, shows, navigate]);
 
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 2500);
-  }, [path]);
-
-  if (loading) {
-    return <Loading />;
+  if (show === "") {
+    return <LoadingPage />;
   }
 
   if (show === undefined) {
-    return <h1>404</h1>;
+    return <Error2 />;
   }
   return (
     <>
