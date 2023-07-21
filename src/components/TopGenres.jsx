@@ -1,28 +1,19 @@
 import Wrapper from "./Wrapper";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { ArrowLeft, ArrowRight } from "../utils/icons";
 import { useMediaQuery } from "@mui/material";
 import { Link } from "react-router-dom";
 const genres = ["action", "comedy", "drama", "animation", "crime"];
-
 const TopGenres = () => {
   const swiperRef = useRef(null);
   const xl = useMediaQuery("(min-width: 1400px)");
   const lg = useMediaQuery("(min-width: 1227px)");
   const md = useMediaQuery("(min-width: 968px)");
   const sm = useMediaQuery("(min-width: 840px)");
-  const [isHover, setIsHover] = useState({
-    action: false,
-    comedy: false,
-    drama: false,
-    animation: false,
-    crime: false,
-  });
   return (
     <Wrapper>
       <header className="mb-5 ">
@@ -41,22 +32,17 @@ const TopGenres = () => {
               <SwiperSlide
                 className="relative overflow-hidden w-full h-52 flex justify-center items-center"
                 key={"hero-swiper-sm" + index + item.id}
-                onMouseEnter={() => setIsHover({ ...isHover, [item]: true })}
-                onMouseLeave={() => {
-                  setIsHover({ ...isHover, [item]: false });
-                }}
               >
-                <Link to="/" className="w-full   h-full">
+                <Link
+                  to={`/movies/search/${item}`}
+                  className="w-full h-full flex justify-center items-center"
+                >
                   <img
                     src={`/assets/others/${item}.webp`}
                     alt=""
-                    className={`block transition-all duration-300 absolute  object-cover ${
-                      isHover[item] ? "w-[130%] h-[130%]" : "w-full h-full"
-                    }`}
+                    className={`block transition-all duration-300 absolute brightness-50  object-cover w-full h-full hover:w-[120%]  hover:h-[120%] `}
                   />
-                  <div className="w-full relative z-10 bg-[rgba(0,0,0,0.6)] h-full flex justify-center items-center">
-                    <p className="text-xl ">{item}</p>
-                  </div>
+                  <p className="absolute capitalize text-lg">{item}</p>
                 </Link>
               </SwiperSlide>
             );

@@ -14,10 +14,21 @@ const Movies = () => {
   const { id } = useParams();
   const { movies, shows } = useSelector((store) => store.movieData);
   const [movie, setMovie] = useState("");
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, [id]);
   useEffect(() => {
     const exist = movies.find((item) => item.id === id);
     setMovie(exist);
   }, [id, movies, shows]);
+
+  if (loading) {
+    return <LoadingPage />;
+  }
 
   if (movie === "") {
     return <LoadingPage />;

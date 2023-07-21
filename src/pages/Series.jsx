@@ -17,10 +17,23 @@ const Series = () => {
   const [show, setShow] = useState("");
   const [episode, setEpisode] = useState(0);
   const [season, setSeason] = useState(0);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, [id]);
+
   useEffect(() => {
     const exist = shows.find((item) => item.id === id);
     setShow(exist);
   }, [id, movies, shows, navigate]);
+
+  if (loading) {
+    return <LoadingPage />;
+  }
 
   if (show === "") {
     return <LoadingPage />;
@@ -58,7 +71,7 @@ const Series = () => {
                     },
                   ],
 
-                  poster: `/assets/collections/${show.bgImage}`,
+                  poster: `/assets/collections/${show.mainImage}`,
                   aspectRatio: "16:9",
                 }}
               />
