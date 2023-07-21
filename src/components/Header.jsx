@@ -122,8 +122,11 @@ const Submenu = ({ address, title, sidemenu }) => {
   );
 };
 
-const Menu = ({ title, submenu, address }) => {
+const Menu = ({ title, submenu, address, pathname }) => {
   const [openMenu, setOpenMenu] = useState(false);
+  useEffect(() => {
+    setOpenMenu(false);
+  }, [pathname]);
   if (submenu.length === 0) {
     return (
       <li className="relative cursor-pointer transition-all h-full">
@@ -283,7 +286,9 @@ const Header = () => {
         <img src={logo} alt="" className="w-36 sm:w-44" />
         <ul className="hidden lg:flex items-center justify-between  h-full w-[30rem]  ml-16 xl:ml-32">
           {menu.map((item, index) => {
-            return <Menu {...item} key={"itemheader" + index} />;
+            return (
+              <Menu {...item} key={"itemheader" + index} pathname={pathname} />
+            );
           })}
         </ul>
         <div className="flex gap-10 ml-auto items-center">
@@ -357,6 +362,7 @@ Menu.propTypes = {
   title: PropTypes.string,
   submenu: PropTypes.array,
   address: PropTypes.string,
+  pathname: PropTypes.string,
 };
 
 export default Header;

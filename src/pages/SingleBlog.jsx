@@ -243,7 +243,7 @@ const SingleBlog = () => {
               }}
             />
             <Link
-              to={`/blog/search/${form}`}
+              to={`/blog/search/${search}`}
               className="w-16 h-full flex justify-center items-center bg-light-red"
             >
               <SearchIcon className={"w-5 h-5"} />
