@@ -51,7 +51,7 @@ const ShowHero = () => {
     smallSwiper.current.swiper.slidePrev();
   };
   return (
-    <div className="w-full relative h-[45rem] lg:min-h-screen bg-green-400 ">
+    <div className="w-full relative h-[45rem] lg:min-h-screen bg-darker-gray ">
       <Swiper
         modules={[Navigation]}
         loop={true}
